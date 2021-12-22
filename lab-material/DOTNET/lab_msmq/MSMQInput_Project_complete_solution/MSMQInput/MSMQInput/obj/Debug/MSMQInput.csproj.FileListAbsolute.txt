@@ -1,0 +1,4 @@
+c:\student10\DOTNET\lab_msmq\dll\MSMQInput.dll
+c:\student10\DOTNET\lab_msmq\dll\MSMQInput.pdb
+c:\student10\DOTNET\lab_msmq\MSMQInput_Project\MSMQInput\MSMQInput\obj\Debug\MSMQInput.dll
+c:\student10\DOTNET\lab_msmq\MSMQInput_Project\MSMQInput\MSMQInput\obj\Debug\MSMQInput.pdb

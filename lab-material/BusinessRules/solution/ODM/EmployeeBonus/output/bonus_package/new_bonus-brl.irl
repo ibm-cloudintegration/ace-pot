@@ -1,0 +1,15 @@
+package bonus$_$package {
+   rule new$_$bonus {
+      property ilog.rules.business_name = "new_bonus";
+      property ilog.rules.package_name = "bonus_package";
+      property status = "new";
+      when {
+         sample.iibadmin.EMPLOYEEType() from employee;
+         evaluate ((employee.SALARY.compareTo(new java.math.BigDecimal("20000")) < 0
+         	&& employee.BONUS.compareTo(new java.math.BigDecimal("200")) < 0));
+      } then {
+         employee.BONUS = new java.math.BigDecimal("500");
+      }
+   }
+}
+

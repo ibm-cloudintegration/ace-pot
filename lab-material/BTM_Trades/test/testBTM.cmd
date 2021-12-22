@@ -1,0 +1,1 @@
+c:\tools\rfhutil\mqput2.exe -f c:\student10\BTM_Trades\test\testBTM.txt

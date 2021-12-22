@@ -1,0 +1,1 @@
+employeeData:{"EMPLOYEE": {   "EMPNO": "000001",   "FIRSTNME": "Albert",   "MIDINIT": "J",   "LASTNAME": "Einstein",   "WORKDEPT": "A00",   "PHONENO": "0101",   "HIREDATE": "1912-07-27",   "JOB": "Manager",   "EDLEVEL": 9,   "SEX": "M",   "BIRTHDATE": "1879-03-14",   "SALARY": 9990,   "BONUS": 4440,   "COMM": 6660 } }

@@ -1,0 +1,25 @@
+        private void MessageReceived(object source, ReceiveCompletedEventArgs asyncResult) {
+            MessageQueue inputQ = null;
+            try {
+                // Connect to the queue
+                inputQ = (MessageQueue)source;
+
+                // End the asynchronous Receive operation.
+                Message message = inputQ.EndReceive(asyncResult.AsyncResult);
+
+                // Reads the bytes from the input message
+                byte[] msgBolb = System.Text.Encoding.Default.GetBytes(new System.IO.StreamReader(message.BodyStream).ReadToEnd());
+
+                // Creates the event that will be delivered to the broker
+                NBEvent nbEvent = new NBByteArrayInputEvent(this, msgBolb);
+
+                // Saves the incoming message id in the BuildProperties collection, which will be copied to the LocalEnvironment
+                nbEvent.BuildProperties().Add("MsgId", message.Id);
+
+                // Delivers the event to the IIB runtime
+                this.DeliverEvent(nbEvent);
+            } finally {
+                // Restart the asynchronous Receive operation.
+                inputQ.BeginReceive();
+            }
+        }

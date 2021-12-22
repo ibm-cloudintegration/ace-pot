@@ -1,0 +1,180 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "HR Employee and Department Services",
+    "description" : "This is the HRDB Swagger document for the Employee and Department Services used by the IIB BetaWorks REST labs. It does not contains resource definitions - JSON model definitions only.",
+    "version" : "2.0.0"
+  },
+  "basePath" : "/HRDB_RESTServices/resources",
+  "tags" : [ {
+    "name" : "employees",
+    "description" : "Lists all of the employees at ACME"
+  }, {
+    "name" : "departments",
+    "description" : "Lists all of the departments at ACME"
+  } ],
+  "paths" : { },
+  "definitions" : {
+    "EMPLOYEE" : {
+      "required" : [ "BIRTHDATE", "EMPNO", "FIRSTNME", "HIREDATE" ],
+      "properties" : {
+        "EMPNO" : {
+          "type" : "string",
+          "description" : "Employee number"
+        },
+        "FIRSTNME" : {
+          "type" : "string",
+          "description" : "First name"
+        },
+        "MIDINIT" : {
+          "type" : "string",
+          "description" : "Middle initial"
+        },
+        "LASTNAME" : {
+          "type" : "string",
+          "description" : "Last name"
+        },
+        "WORKDEPT" : {
+          "type" : "string",
+          "description" : "Work department"
+        },
+        "PHONENO" : {
+          "type" : "string",
+          "description" : "Phone number"
+        },
+        "HIREDATE" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Hire date"
+        },
+        "JOB" : {
+          "type" : "string",
+          "description" : "Job"
+        },
+        "EDLEVEL" : {
+          "type" : "integer",
+          "description" : "Employee number"
+        },
+        "SEX" : {
+          "type" : "string",
+          "description" : "Gender (M or F)"
+        },
+        "BIRTHDATE" : {
+          "type" : "string",
+          "format" : "date",
+          "description" : "Date of birth"
+        },
+        "SALARY" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "Salary"
+        },
+        "BONUS" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "Bonus"
+        },
+        "COMM" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "Commission"
+        }
+      },
+      "description" : "Employee resource representation"
+    },
+    "DEPARTMENT" : {
+      "type" : "object",
+      "properties" : {
+        "DEPTNO" : {
+          "type" : "string"
+        },
+        "DEPTNAME" : {
+          "type" : "string"
+        },
+        "MGRNO" : {
+          "type" : "string"
+        },
+        "ADMRDEPT" : {
+          "type" : "string"
+        },
+        "LOCATION" : {
+          "type" : "string"
+        }
+      }
+    },
+    "DBRESP" : {
+      "type" : "object",
+      "properties" : {
+        "UserReturnCode" : {
+          "type" : "integer"
+        },
+        "RowsRetrieved" : {
+          "type" : "integer"
+        },
+        "RowsAdded" : {
+          "type" : "integer"
+        },
+        "RowsUpdated" : {
+          "type" : "integer"
+        },
+        "RowsDeleted" : {
+          "type" : "integer"
+        },
+        "SQLCODE_Errorcode" : {
+          "type" : "integer"
+        },
+        "SQLSTATE_SQLState" : {
+          "type" : "string"
+        },
+        "SQL_Error_Message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EmployeeResponse" : {
+      "type" : "object",
+      "properties" : {
+        "DBResp" : {
+          "$ref" : "#/definitions/DBRESP"
+        },
+        "Employee" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EMPLOYEE"
+          }
+        }
+      }
+    },
+    "DepartmentResponse" : {
+      "type" : "object",
+      "properties" : {
+        "DBResp" : {
+          "$ref" : "#/definitions/DBRESP"
+        },
+        "Department" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/DEPARTMENT"
+          }
+        }
+      }
+    },
+    "DetailedResponse" : {
+      "type" : "object",
+      "properties" : {
+        "DBResp_employee" : {
+          "$ref" : "#/definitions/DBRESP"
+        },
+        "Employee" : {
+          "$ref" : "#/definitions/EMPLOYEE"
+        },
+        "DBResp_department" : {
+          "$ref" : "#/definitions/DBRESP"
+        },
+        "Department" : {
+          "$ref" : "#/definitions/DEPARTMENT"
+        }
+      }
+    }
+  }
+}

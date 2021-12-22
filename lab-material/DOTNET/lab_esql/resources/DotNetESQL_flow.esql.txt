@@ -1,0 +1,9 @@
+		DECLARE FULLNAME CHARACTER;
+		DECLARE COUNTRYCODE CHARACTER;
+		DECLARE ZIPCODE CHARACTER ;
+		
+		SET ZIPCODE = InputBody.Contact.ZipCode;
+		SET FULLNAME = UpdateExternal(InputBody.Contact.FirstName, InputBody.Contact.LastName, InputBody.Contact.Country, COUNTRYCODE , ZIPCODE);
+		SET OutputRoot.XMLNSC.ContactAdded.Fullname = FULLNAME;
+		SET OutputRoot.XMLNSC.ContactAdded.Country = COUNTRYCODE;
+		SET OutputRoot.XMLNSC.ContactAdded.Zipcode = ZIPCODE;

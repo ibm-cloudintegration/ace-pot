@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><tns0:Envelope xmlns:tns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:Q10="http://sample/iibadmin" xmlns:tns1="http://EmployeeService" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tns0:Header/>
+  <tns0:Body>
+    <tns1:checkBonus>
+      <Q10:EMPLOYEE>
+        <EMPNO>000050</EMPNO>
+        <FIRSTNME>FIRSTNME</FIRSTNME>
+        <MIDINIT>MIDINIT</MIDINIT>
+        <LASTNAME>LASTNAME</LASTNAME>
+        <WORKDEPT>B01</WORKDEPT>
+        <PHONENO>1234</PHONENO>
+        <HIREDATE>2002-01-01</HIREDATE>
+        <JOB>JOB</JOB>
+        <EDLEVEL>9</EDLEVEL>
+        <SEX>M</SEX>
+        <BIRTHDATE>2002-01-01</BIRTHDATE>
+        <SALARY>80000</SALARY>
+        <BONUS>800</BONUS>
+        <COMM>0</COMM>
+      </Q10:EMPLOYEE>
+    </tns1:checkBonus>
+  </tns0:Body>
+</tns0:Envelope>

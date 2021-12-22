@@ -1,0 +1,9 @@
+C:\student\DOTNET\resources\SampleApplication\obj\Debug\ResolveAssemblyReference.cache
+C:\student\DOTNET\resources\SampleApplication\obj\Debug\SampleApplication.Form1.resources
+C:\student\DOTNET\resources\SampleApplication\obj\Debug\GenerateResource.read.1.tlog
+C:\student\DOTNET\resources\SampleApplication\obj\Debug\GenerateResource.write.1.tlog
+C:\student\DOTNET\resources\SampleApplication\bin\Debug\SampleApplication.exe
+C:\student\DOTNET\resources\SampleApplication\bin\Debug\SampleApplication.pdb
+C:\student\DOTNET\resources\SampleApplication\obj\Debug\SampleApplication.Form2.resources
+C:\student\DOTNET\resources\SampleApplication\obj\Debug\SampleApplication.exe
+C:\student\DOTNET\resources\SampleApplication\obj\Debug\SampleApplication.pdb

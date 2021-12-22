@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <inlinedXMLSchema><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+    <xsd:element name="employee_in" nillable="true" type="xsd:string"/> 
+</xsd:schema>]]></inlinedXMLSchema>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var1"/>
+    <input path="db:database(/HRDB.dbm,HRDB,db:schema-tables(IIBADMIN,EMPLOYEE))" var="HRDB"/>
+    <output path="/hrdb/iibadmin/HRDB.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="supplement" prefix="out" uri="http://hrdb/iibadmin"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="checkBonus_getEmployee">
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON">
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="employee_in" ref="var1"/>
+        </input>
+        <input path="$HRDB/db:select(fn:false(),ResultSet(IIBADMIN/EMPLOYEE/EMPNO,IIBADMIN/EMPLOYEE/FIRSTNME,IIBADMIN/EMPLOYEE/MIDINIT,IIBADMIN/EMPLOYEE/LASTNAME,IIBADMIN/EMPLOYEE/WORKDEPT,IIBADMIN/EMPLOYEE/PHONENO,IIBADMIN/EMPLOYEE/HIREDATE,IIBADMIN/EMPLOYEE/JOB,IIBADMIN/EMPLOYEE/EDLEVEL,IIBADMIN/EMPLOYEE/SEX,IIBADMIN/EMPLOYEE/BIRTHDATE,IIBADMIN/EMPLOYEE/SALARY,IIBADMIN/EMPLOYEE/BONUS,IIBADMIN/EMPLOYEE/COMM),db:where('IIBADMIN.EMPLOYEE.EMPNO =  ?','?'=$ComIbmMessageAssembly_JSON/in:JSON//Data//employee_in))" var="dbselect"/>
+        <output namespace="http://hrdb/iibadmin" path="mb:msg(EMPLOYEE,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_EMPLOYEE"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/Properties"/>
+            <output path="$ComIbmMessageAssembly_EMPLOYEE/Properties"/>
+        </move>
+        <select ref="dbselect">
+            <input path="$dbselect/ResultSet"/>
+            <output path="$ComIbmMessageAssembly_EMPLOYEE/EMPLOYEE"/>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/EMPNO"/>
+                <output path="EMPNO"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/FIRSTNME"/>
+                <output path="FIRSTNME"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/MIDINIT"/>
+                <output path="MIDINIT"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/LASTNAME"/>
+                <output path="LASTNAME"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/WORKDEPT"/>
+                <output path="WORKDEPT"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/PHONENO"/>
+                <output path="PHONENO"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/HIREDATE"/>
+                <output path="HIREDATE"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/JOB"/>
+                <output path="JOB"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/EDLEVEL"/>
+                <output path="EDLEVEL"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/SEX"/>
+                <output path="SEX"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/BIRTHDATE"/>
+                <output path="BIRTHDATE"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/SALARY"/>
+                <output path="SALARY"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/BONUS"/>
+                <output path="BONUS"/>
+            </move>
+            <move automap="true">
+                <input path="IIBADMIN/EMPLOYEE/COMM"/>
+                <output path="COMM"/>
+            </move>
+        </select>
+    </mappingDeclaration>
+</mappingRoot>

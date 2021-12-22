@@ -1,0 +1,10 @@
+
+
+CREATE COMPUTE MODULE I_am_doing_nothing_wrong_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot = InputRoot;
+		RETURN sleep(500);
+	END;
+
+END MODULE;

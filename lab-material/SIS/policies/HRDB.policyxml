@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<policies>
+    <policy policyType="JDBCProviders" policyName="HRDB">
+        <connectionUrlFormat>jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=iibadmin;password=passw0rd;</connectionUrlFormat>
+        <databaseName>HRDB</databaseName>
+        <databaseType>DB2 Universal Database</databaseType>
+        <databaseVersion>12</databaseVersion>
+        <description>HRDB Employee and Department tables</description>
+        <environmentParms>default_none</environmentParms>
+        <jarsURL>c:\IBM\SQLLIB\java/</jarsURL>
+        <jdbcProviderXASupport>true</jdbcProviderXASupport>
+        <maxConnectionPoolSize>0</maxConnectionPoolSize>
+        <portNumber>50000</portNumber>
+        <securityIdentity>default_User@default_Server</securityIdentity>
+        <serverName>localhost</serverName>
+        <type4DataSourceClassName>com.ibm.db2.jcc.DB2XADataSource</type4DataSourceClassName>
+        <type4DriverClassName>com.ibm.db2.jcc.DB2Driver</type4DriverClassName>
+        <connectionUrlFormatAttr1>one</connectionUrlFormatAttr1>
+        <connectionUrlFormatAttr2>two</connectionUrlFormatAttr2>
+        <connectionUrlFormatAttr3>three</connectionUrlFormatAttr3>
+        <connectionUrlFormatAttr4>four</connectionUrlFormatAttr4>
+        <connectionUrlFormatAttr5>five</connectionUrlFormatAttr5>
+    </policy>
+</policies> 

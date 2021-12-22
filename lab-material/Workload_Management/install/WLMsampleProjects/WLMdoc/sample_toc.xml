@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?NLS  TYPE="org.eclipse.help.toc"?>
+<toc link_to="../com.ibm.etools.msgbroker.samplesgallery/toc.xml#wmb_routing" label="Samples Gallery" topic="../com.ibm.etools.msgbroker.samplesgallery/doc/application.htm">
+      <topic label="Workload Management" href="doc/overview.htm">
+	
+   		<topic label="Introduction" href="doc/introduction.htm"></topic>
+
+		<topic label="Set up the Workload Management sample" href="doc/setup.htm">  </topic>
+ 
+		<topic label="Running the sample" href="doc/running.htm"> 	</topic>
+
+		
+		</topic>
+
+      </toc>

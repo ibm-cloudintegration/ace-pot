@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <inlinedXMLSchema><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">           
+                                  <xsd:element name="IdentityToAuthorise" type="xsd:string"/>      
+    <xsd:element name="env_empNumber" type="xsd:int"/>        
+    <xsd:element name="empNumber" nillable="true" type="xsd:string"/>           
+</xsd:schema>]]></inlinedXMLSchema>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/assembly/Environment.xsd" var="var3"/>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var1"/>
+    <input path="mbsharedlib://EmployeeService_interface_and_maps/EmployeeService_InlineSchema1.xsd" var="var6"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/assembly/Environment.xsd" var="var4"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/SOAPDomainMsg.xsd" var="var5"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="supplement" prefix="io2" uri="http://EmployeeService"/>
+        <namespace kind="supplement" prefix="io" uri="http://sample/iibadmin"/>
+        <namespace kind="supplement" prefix="in2" uri="http://hrdb/iibadmin"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="EmpServ_JSON_getEmployee_JSON_to_SOAP_extractDN_10_0_0_3">
+        <input path="$var3/mb:env(Environment)" var="Environment">
+            <cast castType="userDefined" path="$Environment/Variables/any" qualifier="env_empNumber" ref="var1" var="any"/>
+        </input>
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly">
+            <cast castType="userDefined" path="$MessageAssembly/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var" var="anyType"/>
+            <cast castType="userDefined" path="$MessageAssembly/JSON/spath('Data',2)/any" qualifier="empNumber" ref="var1" var="any1"/>
+        </input>
+        <output path="$var4/mb:env(Environment)" var="Environment1">
+            <cast castType="userDefined" path="$Environment1/Variables/any" qualifier="env_empNumber" ref="var1" var="any2"/>
+        </output>
+        <output path="$var5/mb:msg(SOAP_Domain_Msg,assembly,SOAP,LocalEnvironment,Properties)" var="MessageAssembly1">
+            <cast castType="userDefined" path="$MessageAssembly1/LocalEnvironment/any" qualifier="IdentityToAuthorise" ref="var1" var="any4"/>
+            <cast path="$MessageAssembly1/SOAP_Domain_Msg/Body/any" qualifier="{http://EmployeeService}getEmployee" ref="var6" var="any5"/>
+        </output>
+        <passthrough>
+            <input path="$Environment/."/>
+            <output path="$Environment1/."/>
+            <updates>
+                <convert>
+                    <input path="$MessageAssembly/JSON/spath('Data',2)/empNumber"/>
+                    <output path="$Environment1/Variables/env_empNumber"/>
+                </convert>
+            </updates>
+        </passthrough>
+        <move>
+            <input path="$MessageAssembly/Properties"/>
+            <output path="$MessageAssembly1/Properties"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/empNumber[1]"/>
+            <output path="$MessageAssembly1/SOAP_Domain_Msg/Body/getEmployee/employeeNumber"/>
+        </move>
+        <expression>
+            <input path="$MessageAssembly/Properties/IdentitySourceToken" var="IdentitySourceToken"/>
+            <output path="$MessageAssembly1/LocalEnvironment/IdentityToAuthorise"/>
+            <code lang="xpath">fn:substring-after(fn:substring-before($IdentitySourceToken,",OU="),"CN=")</code>
+        </expression>
+    </mappingDeclaration>
+</mappingRoot>

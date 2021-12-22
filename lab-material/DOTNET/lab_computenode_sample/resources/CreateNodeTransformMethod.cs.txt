@@ -1,0 +1,18 @@
+private static void TransformInvoice(NBElement outFileEl, NBElement inInvEl)
+{
+     // This method creates a structure based on
+     // the Invoice Element in the input message
+     IEnumerable<NBElement> items = inInvEl.Children("Item");
+     foreach (NBElement item in items)
+     {
+          NBElement record = outFileEl.CreateLastChild(null, "Record");
+          string notgt = "";
+          record.CreateLastChild(notgt, "Code1", (string)item["Code", 0]);
+          record.CreateLastChild(notgt, "Code2", (string)item["Code", 1]);
+          record.CreateLastChild(notgt, "Code3", (string)item["Code", 2]);
+          record.CreateLastChild(notgt, "Description", (string)item["Description"]);
+          record.CreateLastChild(notgt, "Category", (string)item["Category"]);
+          record.CreateLastChild(notgt, "Price", (decimal)item["Price"]);
+          record.CreateLastChild(notgt, "Quantity", (Int32)item["Quantity"]);
+     }
+}

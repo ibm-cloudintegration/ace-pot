@@ -1,0 +1,5 @@
+C:\student\PatternAuth\resources\RetailBank\RetailBank\obj\Release\ResolveAssemblyReference.cache
+C:\student\PatternAuth\resources\RetailBank\RetailBank\bin\Release\BankingApplication.dll
+C:\student\PatternAuth\resources\RetailBank\RetailBank\bin\Release\BankingApplication.pdb
+C:\student\PatternAuth\resources\RetailBank\RetailBank\obj\Release\BankingApplication.dll
+C:\student\PatternAuth\resources\RetailBank\RetailBank\obj\Release\BankingApplication.pdb

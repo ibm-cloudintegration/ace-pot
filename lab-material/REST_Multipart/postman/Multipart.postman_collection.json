@@ -1,0 +1,46 @@
+{
+	"id": "5af0ecde-7d05-7bac-4062-e2e9fd4a23a3",
+	"name": "Multipart",
+	"description": "",
+	"order": [
+		"26f590af-003c-090d-2a14-6e029e495eaf"
+	],
+	"folders": [],
+	"timestamp": 1475063840073,
+	"owner": 0,
+	"public": false,
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "26f590af-003c-090d-2a14-6e029e495eaf",
+			"headers": "",
+			"url": "http://localhost:7800/HR_Services/resources/employees/multipart",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "employeeData",
+					"value": "{\"EMPLOYEE\": {   \"EMPNO\": \"000003\",   \"FIRSTNME\": \"Albert\",   \"MIDINIT\": \"J\",   \"LASTNAME\": \"Einstein\",   \"WORKDEPT\": \"A00\",   \"PHONENO\": \"0101\",   \"HIREDATE\": \"1912-07-27\",   \"JOB\": \"Manager\",   \"EDLEVEL\": 9,   \"SEX\": \"M\",   \"BIRTHDATE\": \"1879-03-14\",   \"SALARY\": 9990,   \"BONUS\": 4440,\"COMM\":6660 } }",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "employeeImage",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1477487465772,
+			"name": "http://localhost:7800/HR_Services/resources/employees/multipart",
+			"description": "Add employee with multipart REST request",
+			"collectionId": "5af0ecde-7d05-7bac-4062-e2e9fd4a23a3",
+			"responses": []
+		}
+	]
+}

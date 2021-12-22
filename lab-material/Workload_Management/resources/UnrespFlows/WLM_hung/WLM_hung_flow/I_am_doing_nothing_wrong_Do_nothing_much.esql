@@ -1,0 +1,12 @@
+
+
+CREATE COMPUTE MODULE I_am_doing_nothing_wrong_Do_nothing_much
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		SET OutputRoot = InputRoot;
+		RETURN sleep(100);
+	END;
+
+END MODULE;
+

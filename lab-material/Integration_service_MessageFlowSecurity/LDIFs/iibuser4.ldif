@@ -1,0 +1,6 @@
+dn: uid=iibuser4,ou=users,ou=iib,o=ibm
+userPassword: passw0rd
+uid: iibuser4
+objectClass: inetOrgPerson\par
+sn: <User_Name>
+cn: cn=iibuser4

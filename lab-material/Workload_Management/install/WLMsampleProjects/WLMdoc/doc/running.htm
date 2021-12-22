@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- 
+
+(C) COPYRIGHT International Business Machines Corp., 2010
+
+All Rights Reserved * Licensed Materials - Property of IBM
+
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../../com.ibm.etools.msgbroker.samplesgallery/scripts/samples.js" type="text/javascript" xml:space="preserve"> </script>
+<script src="../../org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<link href="../../com.ibm.etools.mft.doc/bip4.css" rel="stylesheet" type="text/css" />
+<link href="../../com.ibm.etools.msgbroker.samplesgallery/css/gallery_common.css" rel="stylesheet" type="text/css" />
+<link href="../../com.ibm.etools.msgbroker.samplesgallery/css/gallery_messagebroker.css" rel="stylesheet" type="text/css" />
+
+  <title>Running the Workload Management sample</title>
+</head>
+<body class="sampcont">
+      <h1>Running the Workload Management sample</h1>
+
+<p>Before you run the sample, you must complete the sample setup instructions; 
+for more information, see 
+<a href="setup.htm">Setting up the Workload Management sample</a>.</p>
+
+<p>The Workload Management sample programs allow a pair of message flows (within an Integration Bus Application) to be driven as fast as they will go for a short time, using a large file. The back-end program gives an indication of the message rate being achieved by the flows. The main point of the sample is to allow you to observe how setting policies changes the rate at which the message flows invoke a back-end program. The instructions here describe how to use the sample flows in 3 ways:</p>
+<ol>
+<li>Without any policy in place - the backend application will indicate that the flow is going too fast.</li>
+<li>With the maximum rate set on the BAR file - the back-end application should indicate the flow is going at the rate you set.</li>
+<li>With the maximum rate set via a policy, without changing the BAR file - this should also show the flow going at the rate you set.</li>
+</ol>
+
+<h2>Starting the back-end program</h2>
+
+<p>Before you run any work through the sample, you need to ensure the back-end program is running. When you import the sample, a project called Run_slow_tcpip_app is created in your Integration Toolkit workspace. This contains a batch file/shell script which will launch the back-end program from a command prompt.</p>
+
+<p>To start the back-end application:
+<ol>
+<li>Start a new command prompt.</li>
+<li>Run the <tt>mqsiprofile</tt> script from your Integration Bus runtime installation - this ensures that you have the required Java runtime environment.</li>
+<li>On Linux, ensure that you have the DISPLAY environment variable set - the backend program requires a graphical display environment.</li>
+<li>Navigate to your Integration Toolkit workspace directory where you imported the sample projects, and change into the Run_slow_tcpip_app subdirectory.</li>
+<li>On Windows, run <pre>slow_tcpip_app.bat 1445 10</pre> or on Linux run <pre>bash slow_tcpip_app.sh 1445 10</pre> to launch the back-end application. Make sure you add the parameters on the end, which are for the port (1445) and the maximum rate (10 messages per second).</li>
+<li>You should see a window appear with a counter in it.</li>
+</ol>
+The backend application should look like this:</p>
+<p><img border="0" src="WLMSlowApp.gif" alt="A screen capture of the backend application window" /></p>
+
+<h2>Running the sample without any policy in force</h2>
+
+<p>The purpose of this step is to demonstrate that without a policy, the integration node will process data too fast for the back-end application. Remember that the back-end application will report warnings if it is driven at more than 10 messages per second.</p>
+
+<p>A data file called <tt>WLMSample_QueryProductSalesByStores.xml</tt> is included in the same Run_slow_tcpip_app project that contains the back-end application. This contains 10000 records which should take around 1 minute to process on an average workstation. To drive the application, copy that file into the input directory you chose for your message flows in <a href="setup.htm">Setting up the sample</a>. This is <tt>C:\WLMSample\fileinput</tt> on Windows, or <tt>/tmp/WLMSample/fileinput</tt> on Linux, if you have followed the suggested directory from the instructions.</p>
+
+<p>You should see the counter on the backend application increase to a large number.  This number indicates the message rate.   The background of the window will turn red and the console window will show messages like "Going too fast" to show that the backend application is being overloaded.</p>
+
+<p>As the file is processed, you will see records added to the output file which is in <tt>C:\WLMSample\fileoutput\WLMSample_OutputProductSalesByStores.xml</tt> on Windows or <tt>/tmp/WLMSample/fileoutput/WLMSample_OutputProductSalesByStores.xml</tt> on Linux. There should be 10000 lines added to that file once the data has been fully processed.</p>
+
+<h2>Running the sample with a hardcoded rate limit</h2>
+
+<p>You can impose a maximum processing rate on a flow in two ways:
+<ol>
+    <li>by setting a configurable property on the flow, within the BAR editor or with the <tt>mqsiapplybaroverride</tt> command</li>
+    <li>by defining a workload policy on the web and attaching it to a flow which has already been deployed</li>
+</ol>
+This step shows how you can use the BAR overrides to control workload. These instructions will show how a limit of 10 messages per second is imposed on the message flow which routes data from the file to the backend TCP/IP application.</p>
+
+<p>When the sample is imported and deployed, the BAR file named <tt>WLMSample_ProductSales.bar</tt> is deployed. This BAR file does not include any overrides to the default settings, so there is no workload limit imposed.</p>
+<p>You can override a property on the <tt>WLMSample_Producer</tt> message flow in the BAR editor to impose a Maximum Rate of 10 messages per second.  To show this:
+<ul>
+<li>Copy the existing BAR file <tt>WLMSample_ProductSales.bar</tt> in the Integration Toolkit and paste it into the same Application with a new name.</li>
+<li>Open the newly copied BAR file and Navigate to the <tt>Manage</tt> tab in the BAR editor, and expand the application to show its message flows.</li>
+<li>Click on the Producer message flow and look at the Properties pane.</li>
+<li>In the Properties pane, click on the <tt>Workload Management</tt> tab to show its properties.</li>
+<li>Set the Maximum Rate to 10 and save the BAR file.</li>
+<li>Deploy your updated BAR file replacing the existing Application.</li>
+</ul>
+</p>
+
+<p>Once you have deployed your updated BAR file, run the same sample data file through the system as in the previous section:
+<ol>
+    <li>Ensure the back-end application is started.</li>
+    <li>Take the sample data file and copy into your <tt>fileinput</tt> directory.</li>
+    <li>Observe that the backend application counter starts to change, but stays at the specified maximum rate (10 messages per second) rather than exceeding it as before.</li>
+    <li>Observe that the output file in the <tt>fileoutput</tt> folder starts to be written to. Check how long it takes to write the 10,000 output records to the file (it should take 1000 seconds or about 13 minutes).</li>
+</ol>
+You can experiment with setting different rate limits on the BAR file.
+</p>
+
+<h2>Running the sample with an administrator-defined workload policy</h2>
+
+<h1>TODO: complete this section once web design is finalised.</h1>
+
+
+<p>If you encounter problems when you run the sample, 
+see <a href="../../com.ibm.etools.mft.doc/bu43950_.htm">Resolving problems when running samples</a> 
+in the Integration  Bus documentation.</p>
+
+
+<p class="samplehome"><a href="overview.htm">Back to sample home</a></p>
+<p></p>
+</body>
+</html>

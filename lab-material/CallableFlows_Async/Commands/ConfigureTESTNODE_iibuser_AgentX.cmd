@@ -1,0 +1,1 @@
+mqsichangeproperties TESTNODE_iibuser -e default -o ComIbmIIBSwitchManager -n agentXConfigFile -p c:\temp\agentx.json

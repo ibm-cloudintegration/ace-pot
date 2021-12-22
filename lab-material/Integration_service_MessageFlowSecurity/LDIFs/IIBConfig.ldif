@@ -1,0 +1,221 @@
+version: 1
+
+#C:\IBM\LDAP\V63~1.1\sbin\64\db2ldif.exe -I iibadmin -o C:\student10\Integration_service_JSONClient_MessageFlowSecurity\LDIFs\IIBConfig.ldif -W C:\idsslapd-iibadmin\tmp\idsdb2ldif.dat 
+
+dn: cn=crypto,cn=localhost
+cn: crypto
+objectclass: ibm-cryptoConfig
+objectclass: ibm-slapdConfigEntry
+objectclass: top
+ibm-slapdCryptoSync: BE3DOlbshSZd6dPK
+ibm-slapdCryptoSalt: rMH%'tuzeT9Y
+ibm-entryuuid: 8bda5457-03da-4943-b0fd-21756e9743c2
+
+
+dn: CN=IBMPOLICIES
+control: 1.3.18.0.2.10.19 false:: MIQAAADbMIQAAAApCgEAMIQAAAAgBAxjcmVhdG9yc05hbWUxhAAAAAwECkNOPUFOWUJPRFkwhA
+ AAADgKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNDEyMjMxNTA5NDMuMjU2MD
+ AwWjCEAAAAKgoBADCEAAAAIQQNbW9kaWZpZXJzTmFtZTGEAAAADAQKQ049QU5ZQk9EWTCEAAAAOA
+ oBADCEAAAALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE0MTIyMzE1MDk0My4yNTYwMDBa
+cn: IBMpolicies
+objectclass: container
+objectclass: top
+objectclass: ibm-replicationContext
+ibm-entryuuid: 4b6471ef-535a-4ec7-9b90-367a22fc4587
+
+dn: IBM-REPLICAGROUP=DEFAULT,CN=IBMPOLICIES
+control: 1.3.18.0.2.10.19 false:: MIQAAADbMIQAAAApCgEAMIQAAAAgBAxjcmVhdG9yc05hbWUxhAAAAAwECkNOPUFOWUJPRFkwhA
+ AAADgKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNDEyMjMxNTA5NDQuMTE1MD
+ AwWjCEAAAAKgoBADCEAAAAIQQNbW9kaWZpZXJzTmFtZTGEAAAADAQKQ049QU5ZQk9EWTCEAAAAOA
+ oBADCEAAAALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE0MTIyMzE1MDk0NC4xMTUwMDBa
+objectclass: top
+objectclass: ibm-replicaGroup
+ibm-replicaGroup: default
+ibm-entryuuid: a7bc4a37-e171-4f94-bd88-1e61d2edca61
+aclpropagate: TRUE
+ownerpropagate: TRUE
+entryowner: access-id:CN=ROOT
+aclentry: group:CN=ANYBODY
+
+dn: globalGroupName=GlobalAdminGroup,cn=ibmpolicies
+control: 1.3.18.0.2.10.19 false:: MIQAAADbMIQAAAApCgEAMIQAAAAgBAxjcmVhdG9yc05hbWUxhAAAAAwECkNOPUFOWUJPRFkwhA
+ AAADgKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNDEyMjMxNTA5NDQuODY1MD
+ AwWjCEAAAAKgoBADCEAAAAIQQNbW9kaWZpZXJzTmFtZTGEAAAADAQKQ049QU5ZQk9EWTCEAAAAOA
+ oBADCEAAAALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE0MTIyMzE1MDk0NC44NjUwMDBa
+globalGroupName: GlobalAdminGroup
+objectclass: top
+objectclass: ibm-globalAdminGroup
+ibm-entryuuid: d3a14c7a-1f97-47c9-af7f-9ffb77c4d99f
+
+dn: cn=pwdpolicy,cn=ibmpolicies
+control: 1.3.18.0.2.10.19 false:: MIQAAADbMIQAAAApCgEAMIQAAAAgBAxjcmVhdG9yc05hbWUxhAAAAAwECkNOPUFOWUJPRFkwhA
+ AAADgKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNDEyMjMxNTA5NDUuNTUzMD
+ AwWjCEAAAAKgoBADCEAAAAIQQNbW9kaWZpZXJzTmFtZTGEAAAADAQKQ049QU5ZQk9EWTCEAAAAOA
+ oBADCEAAAALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE0MTIyMzE1MDk0NS41NTMwMDBa
+objectclass: container
+objectclass: pwdPolicy
+objectclass: ibm-pwdPolicyExt
+objectclass: ibm-pwdGroupAndIndividualPolicies
+objectclass: top
+cn: pwdPolicy
+pwdAttribute: userPassword
+pwdInHistory: 0
+pwdCheckSyntax: 0
+pwdGraceLoginLimit: 0
+pwdLockoutDuration: 0
+pwdMaxFailure: 0
+pwdFailureCountInterval: 0
+passwordMaxRepeatedChars: 0
+passwordMaxConsecutiveRepeatedChars: 0
+pwdMaxAge: 0
+pwdMinAge: 0
+pwdExpireWarning: 0
+pwdMinLength: 0
+passwordMinAlphaChars: 0
+passwordMinOtherChars: 0
+passwordMinDiffChars: 0
+ibm-pwdPolicy: false
+pwdLockout: false
+pwdAllowUserChange: true
+pwdMustChange: true
+pwdSafeModify: false
+ibm-pwdGroupAndIndividualEnabled: false
+ibm-entryuuid: 85f26984-3316-4a58-b805-83c2ee79ad9f
+
+dn: CN=REPLICATION,CN=IBMPOLICIES
+control: 1.3.18.0.2.10.19 false:: MIQAAADbMIQAAAApCgEAMIQAAAAgBAxjcmVhdG9yc05hbWUxhAAAAAwECkNOPUFOWUJPRFkwhA
+ AAADgKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNDEyMjMxNTA5NDUuNjYyMD
+ AwWjCEAAAAKgoBADCEAAAAIQQNbW9kaWZpZXJzTmFtZTGEAAAADAQKQ049QU5ZQk9EWTCEAAAAOA
+ oBADCEAAAALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE0MTIyMzE1MDk0NS42NjIwMDBa
+cn: REPLICATION
+objectclass: container
+objectclass: top
+ibm-entryuuid: 2aab6f41-6c5a-4983-b316-537b932652bf
+
+dn: o=ibm
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNTAxMDMxMTQzNDMuODYxMDAwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE1MDEwMzExNDM0My44NjEwMDBa
+objectclass: organization
+objectclass: top
+o: o=ibm
+o: ibm
+ibm-entryuuid: 0856833d-c456-4a2d-8b68-4e22bb35cadc
+
+dn: ou=iib,o=ibm
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNTAxMDMxMTUwMTEuNzgyMDAwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE1MDEwMzExNTAxMS43ODIwMDBa
+ou: ou=iib
+ou: iib
+objectclass: organizationalunit
+objectclass: top
+ibm-entryuuid: e36a9f75-d78c-472e-b949-7b30efbf65a3
+
+dn: ou=users,ou=iib,o=ibm
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNTAxMDMxMTUzMDIuNTcwMDAwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE1MDEwMzExNTMwMi41NzAwMDBa
+ou: ou=users
+ou: users
+objectclass: organizationalunit
+objectclass: top
+ibm-entryuuid: 37935ffb-cf29-4eb6-98ee-dbdc0b98eb42
+
+dn: cn=iibuser3,ou=users,ou=iib,o=ibm
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNTAxMDMxMTU4MDcuODk1MDAwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE1MDEwMzExNTgwNy44OTUwMDBa
+uid: iibuser3
+userPassword: {AES256}U/pS36hr5eN0A2xipwFLHA==
+objectclass: inetorgperson
+objectclass: organizationalperson
+objectclass: person
+objectclass: top
+sn: iib
+cn: iibuser3
+ibm-entryuuid: 34d610d3-bee4-4f02-8a26-34424e762b6d
+
+dn: cn=iibuser1,ou=users,ou=iib,o=ibm
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNTAxMDQxMjM1MjEuMzI4MDAwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE1MDEwNDEyMzUyMS4zMjgwMDBa
+uid: iibuser1
+userPassword: {AES256}U/pS36hr5eN0A2xipwFLHA==
+objectclass: inetorgperson
+objectclass: organizationalperson
+objectclass: person
+objectclass: top
+sn: iib
+cn: cn=iibuser1
+cn: iibuser1
+ibm-entryuuid: e0c0dd33-8a8e-4c38-a951-dbb8ddc68584
+
+dn: cn=iibuser2,ou=users,ou=iib,o=ibm
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNTAxMDQxMjM2MjIuOTY3MDAwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE1MDEwNDEyMzYyMi45NjcwMDBa
+uid: iibuser2
+userPassword: {AES256}U/pS36hr5eN0A2xipwFLHA==
+objectclass: inetorgperson
+objectclass: organizationalperson
+objectclass: person
+objectclass: top
+sn: iib
+cn: cn=iibuser2
+cn: iibuser2
+ibm-entryuuid: 91afc930-03ba-47b1-9923-a2a8f6555f47
+
+dn: cn=iibauth_checkbonus,ou=users,ou=iib,o=ibm
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNTAxMDQxMjQwMzcuMzQ2MDAwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE1MDEwNDEyNDAzNy4zNDYwMDBa
+objectclass: groupofnames
+objectclass: top
+cn: cn=iibauth_checkbonus
+cn: iibauth_checkbonus
+ibm-entryuuid: 6506c7de-530d-40f1-a6bf-eab901008a46
+member: cn=iibuser2,ou=users,ou=iib,o=ibm
+
+dn: c=US
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNTAxMDUxMjQzMzkuNTMzMDAwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE1MDEwNTEyNDMzOS41MzMwMDBa
+objectclass: country
+objectclass: top
+c: US
+ibm-entryuuid: f9f142a6-d5f6-4379-b302-450c51109c36
+
+dn: cn=iibauth_default,ou=users,ou=iib,o=ibm
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNTAxMDUxNjEyMTcuOTkxMDAwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE1MDEwNTE2MTYyNi41NjMwMDBa
+objectclass: groupofnames
+objectclass: top
+cn: cn=iibauth_default
+cn: iibauth_default
+ibm-entryuuid: 237ae1bd-25ea-418f-a3da-226bee152cf2
+member: cn=iibuser1,ou=users,ou=iib,o=ibm
+member: cn=iibuser2,ou=users,ou=iib,o=ibm
+member: cn=iibuser3,ou=users,ou=iib,o=ibm
+
+dn: cn=iibauth_update,ou=users,ou=iib,o=ibm
+control: 1.3.18.0.2.10.19 false:: MIQAAADVMIQAAAAmCgEAMIQAAAAdBAxjcmVhdG9yc05hbWUxhAAAAAkEB0NOPVJPT1QwhAAAAD
+ gKAQAwhAAAAC8ED2NyZWF0ZVRpbWVzdGFtcDGEAAAAGAQWMjAxNTAxMDUxNjEzMTkuMTk2MDAwWj
+ CEAAAAJwoBADCEAAAAHgQNbW9kaWZpZXJzTmFtZTGEAAAACQQHQ049Uk9PVDCEAAAAOAoBADCEAA
+ AALwQPbW9kaWZ5VGltZXN0YW1wMYQAAAAYBBYyMDE1MDEwNTE2MTMxOS4xOTYwMDBa
+objectclass: groupofnames
+objectclass: top
+cn: cn=iibauth_update
+cn: iibauth_update
+ibm-entryuuid: d80685eb-5db8-4bee-8d19-ffde6798bdac
+member: cn=iibuser3

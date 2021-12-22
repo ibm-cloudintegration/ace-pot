@@ -1,0 +1,26 @@
+1) Define queueName - after /// Start Method
+
+        /// Start Method
+        private string queueName;
+
+
+2) Read Input Queue - paste in Start() method
+         
+            // Reads the input queue name from the User Defined Property (UDP) of the node
+          
+            if (Properties.ContainsKey("queueName"))
+            {
+                this.queueName = Properties["queueName"];
+            }
+            else
+            {
+                this.queueName = "CalculatorService.IN.EVENT";
+            }
+            // Opens the input queue for reading
+            MessageQueue inputQ = new MessageQueue(".\\Private$\\" + queueName, QueueAccessMode.Receive);
+
+            // Add an event handler for the ReceiveCompleted event.
+            inputQ.ReceiveCompleted += new ReceiveCompletedEventHandler(this.MessageReceived);
+
+            // Begin the asynchronous receive operation.
+            inputQ.BeginReceive();

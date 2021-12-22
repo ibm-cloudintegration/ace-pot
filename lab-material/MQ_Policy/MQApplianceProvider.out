@@ -1,0 +1,4 @@
+BIP1895I: Policy type 'MQEndpoint' Policy name 'MQApplianceProvider' Policy URI '/apiv1/policy/MQEndpoint/MQApplianceProvider' Policy content '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><policy type="MQEndpoint">    <policyProperties>        <mqConnectionDetailsPolicy>            <connection>SERVER</connection>            <destinationQueueManagerName>QM2</destinationQueueManagerName>            <useSSL>false</useSSL>        </mqConnectionDetailsPolicy>    </policyProperties></policy>'
+
+
+BIP8071I: Successful command completion.

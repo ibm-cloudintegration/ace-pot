@@ -1,0 +1,1 @@
+kafka-server-stop.bat c:\student10\kafka\config\server.properties

@@ -1,0 +1,1 @@
+set MQSI_SOAP_DEBUG=1

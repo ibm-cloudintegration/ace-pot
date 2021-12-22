@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!--
+
+(C) COPYRIGHT International Business Machines Corp., 2010
+
+All Rights Reserved * Licensed Materials - Property of IBM
+
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../../com.ibm.etools.msgbroker.samplesgallery/scripts/samples.js" type="text/javascript" xml:space="preserve"> </script>
+<script src="../../org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<link href="../../com.ibm.etools.mft.doc/bip4.css" rel="stylesheet" type="text/css" />
+<link href="../../com.ibm.etools.msgbroker.samplesgallery/css/gallery_common.css" rel="stylesheet" type="text/css" />
+<link href="../../com.ibm.etools.msgbroker.samplesgallery/css/gallery_messagebroker.css" rel="stylesheet" type="text/css" />
+
+  <title>About the Workload Management sample</title>
+</head>
+<body class="sampcont">
+
+<h1>About the Workload Management sample</h1>
+
+<p>This sample uses a small Java application which simulates a real-time backend system invoked via TCP/IP. The broker 
+provides a batch interface to that application via files - the file is CR-LF delimited and contains a lot of records.
+The broker reads files from an input directory and sends each record to the backend TCP/IP application. It receives TCP/IP
+responses and appends them to another file. Using a large file as input to the flow allows a workload to be simulated
+which will run for long enough to observe the processing rate.</p>
+
+<p>The backend program is designed to simulate a system which will not handle being called at a high rate, and will also
+show the rate at which it is being called.</p>
+
+<p><img border="0" src="WLMFlow.gif" alt="A screen capture of a basic diagram of the sample architecture" /></p>
+
+    
+<h2>Message flows</h2>
+<p>The sample contains one Application with two message flows:</p>
+
+<ol>
+<li>The message flow <tt>WLMSample_ProductSales_Producer.msgflow</tt> uses a FileInput node to read a record from the file <tt>WLMSample_QueryProductSalesByStores.xml</tt> and sent it out via a TCP/IP Client Output node. The output is hardcoded to connect to <tt>localhost:1445</tt>.</li>
+<li>The back-end application receives the record from the TCP/IP Client Output node. The application is capable of determining the rate at which it is processing messages.</li>
+<li>The message flow <tt>WLMSample_ProductSales_Consumer.msgflow</tt> receives the back-end response in a TCP/IP Client Input node and uses a FileOutput node which appends the record to the file WLMSample_ProductSalesByStoresData.xml.</li>
+</ol>
+
+<p>No transformation is done in either of the message flows; they just move data from files to TCP/IP sockets and back again.</p>
+
+<h2>Back-end application</h2>
+
+<p>The sample backend application is a Java program which is invoked on the command line, and runs as a graphical window that gives an indication of the rate at which it is receiving messages. There is a batch file (Windows) or shell script (Linux) which launches the program. It takes two parameters as follows:</p>
+<pre>slow_tcpip_app &lt;tcpip_port&gt; &lt;max_rate&gt;</pre>
+<p>The sample message flow requires the port to be 1445. The maximum rate is normally set to 10 and it represents messages per second.</p>
+<p>The application expects to receive records which are delimited by the 0x00 (null) character, and it replies with null-delimited strings. The response data that the backend application sends is a fixed string, either <tt>Success</tt> or <tt>Fail</tt>. <tt>Fail</tt> is issued if the rate of incoming requests exceeds the value set on the command line. The application also issues text messages to the console while it is receiving messages showing whether it is below the maximum value, above the maximum, or at the maximum value.</p>
+
+<h2>Applying Workload management settings</h2>
+
+<p>When the sample is imported, the default BAR file does not contain any limits on processing rate, so it is likely that the back-end application will report that its rate limit has been exceeded as soon as an input file is presented to the message flow.</p>
+
+<p>You can set a maximum processing rate on the <tt>WLMSample_ProductSales_Producer</tt> message flow to control the rate at which the backend application is called. There are several methods of doing this which are described in the <a href="../../com.ibm.etools.mft.doc/bj58270_.htm">Setting the maximum flow rate</a> documentation.</p>
+
+<p class="samplehome"><a href="overview.htm">Back to sample home</a></p>
+<p></p>
+</body>
+</html>

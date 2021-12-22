@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><teamservers>
+<teamserver>
+<target dataSource="jdbc/ilogDataSource" login="iibadmin" url="http://localhost:9080/teamserver"/>
+<entry baseType="BRLRule" checksum="2669937317" projectName="EmployeeBonus" qualifiedName="bonus_package.new_bonus" sourceCS="501ACC92DC398DB75599D1AB19C4AE37" targetCS="2669937317" type="BRLRule" uuid="189cbc65-9a0b-431c-a306-152ab4f362c0"/>
+<entry baseType="BusinessObjectModel" checksum="2750766750" projectName="EmployeeBonus" qualifiedName="EmployeeBonus_model" sourceCS="95F894C1B1613BA50A72C44E67501CFB" targetCS="2750766750" type="BusinessObjectModel" uuid="ca5a6d70-c3e5-476a-a5b2-42f3a8b5bef4"/>
+<entry baseType="RulePackageInfo" checksum="1563178087" projectName="EmployeeBonus" qualifiedName="bonus_package" sourceCS="4F9A68070E5C01492AB56536A520CBA6" targetCS="1563178087" type="RulePackageInfo" uuid="2da00010-850f-465d-8bbe-8c78083df327"/>
+<entry baseType="RuleProjectInfo" checksum="4037328718" projectName="EmployeeBonus" qualifiedName="EmployeeBonus" sourceCS="1FF1669DACB5CF632DF0856547E9C809" targetCS="4037328718" type="RuleProjectInfo" uuid="e5a58d95-c5f3-4008-911b-60bce6443ca1"/>
+<entry baseType="Vocabulary" checksum="2750766750" projectName="EmployeeBonus" qualifiedName="EmployeeBonus_model_en_US" sourceCS="E208A0904F89557258722133E0F82750" targetCS="2750766750" type="Vocabulary" uuid="d193e9f4-37d0-42f0-8ba8-c3eb81df916c"/>
+</teamserver>
+</teamservers>

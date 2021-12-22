@@ -1,0 +1,24 @@
+
+/* Stylesheet content from css/main.css in folder common */
+/* .background, .background .pane, .background .item, .background .item-complex .item-content{
+    background-color: #f7f8fa;
+}
+ */
+
+
+/* Stylesheet content from css/main.css in folder iphone */
+
+/* this CSS file extends the application CSS file found under common\css */
+
+/*Optional iOS 7 status bar filler*/
+#wl_ios7bar{
+	background-image: url("apps/EmployeeApp/common/images/Water-in-a-Bubble_small.png");
+	height: 15pt;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+}
+body.wl_ios7{
+	padding-top: 15pt;
+}

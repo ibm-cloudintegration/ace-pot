@@ -1,0 +1,12 @@
+mqsichangeproperties IB9NODE -c JMSProviders -o IBM_MessageSight -n jarsURL -v C:\student\MessageSight\ImaClient1.0.0.1\jms\lib
+
+imaserver create MessageHub "Name=eventNotificationHub" "Description=A hub for use with the Event Notification pattern"
+
+
+imaserver create ConnectionPolicy "Name=eventNotificationConnectionPolicy" "Protocol=JMS,MQTT"
+
+
+imaserver create MessagingPolicy "Name=eventNotificationMsgPolicy" "DestinationType=Topic" "Destination=*" "ActionList=Publish,Subscribe" "Protocol=MQTT,JMS"
+
+
+imaserver create Endpoint "Name=eventNotificationEndpoint" "Port=2304" "Protocol=JMS,MQTT" "Interface=192.168.52.133" "ConnectionPolicies=eventNotificationConnectionPolicy" "MessagingPolicies=eventNotificationMsgPolicy" "MaxMessageSize=1KB" "MessageHub=eventNotificationHub" "Enabled=True"

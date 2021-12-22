@@ -1,0 +1,10 @@
+
+
+CREATE COMPUTE MODULE Test_propagate_loop_Access_database_and_lock_account
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot = InputRoot;
+		RETURN TRUE;
+	END;
+
+END MODULE;

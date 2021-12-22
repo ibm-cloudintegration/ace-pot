@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurableservice JDBCProviderName="ODMDS" csName="Default" csType="DecisionServiceRepository" resManagementHost="BETAWORKS-ESB10" resManagementPort="1883" resManagementProfiling="false"/>

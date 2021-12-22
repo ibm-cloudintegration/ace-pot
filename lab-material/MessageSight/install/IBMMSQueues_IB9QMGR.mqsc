@@ -1,0 +1,6 @@
+ALTER QMGR CHLAUTH(DISABLED)
+
+def ql(UPDATE.IN) REPLACE
+def ql(EVENT.IN) REPLACE
+def ql(ERROR) replace
+

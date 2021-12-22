@@ -1,0 +1,20 @@
+#region UserCode
+     outputRoot["Properties"]["MessageSet"].SetValue("DotNetLibrary");
+     outputRoot["Properties"]["MessageType"].SetValue("File");
+     outputRoot.CreateLastChildUsingNewParser(NBParsers.DFDL.ParserName);
+     NBElement File = 
+          outputRoot[NBParsers.DFDL.ParserName].CreateFirstChild(null, "File");
+     NBElement inxmlRoot = inputRoot[NBParsers.XMLNSC.ParserName];
+     IEnumerable<NBElement> invoices = 
+          inxmlRoot["SaleEnvelope"]["SaleList"].Children("Invoice");
+     foreach (NBElement invoice in invoices)
+     {
+     TransformInvoice(File, invoice);
+     }
+     // Define Local Environment override to dynamically control the MQOutput node
+     NBElement outLE = outAssembly.LocalEnvironment.RootElement;
+     NBElement mqLE = 
+          outLE.CreateFirstChild(null, "Destination").CreateFirstChild(null, "MQ");
+     mqLE = mqLE.CreateFirstChild(null, "DestinationData");
+     mqLE.CreateFirstChild(null, "queueName", "DOTNET.OUT");
+#endregion UserCode

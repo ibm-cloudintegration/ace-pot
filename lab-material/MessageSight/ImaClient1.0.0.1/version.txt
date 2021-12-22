@@ -1,0 +1,4 @@
+IBM MessageSight JMS Client V1.0.0.1
+(C) Copyright IBM Corp. 2012, 2013.  All Rights Reserved.
+1.0.0.1
+20130728-0454

@@ -1,0 +1,154 @@
+{
+	"swagger": "2.0",
+	"info": {
+	    "title": "Department Service",
+		"description": "This is the Department Service used by the IIB BetaWorks REST API example",
+		"version": "1.0.0"
+	},
+	"basePath": "/DepartmentServiceApp/resources",
+	"tags": [{
+		"name": "employees",
+		"description": "Lists all of the employees at ACME"
+	},
+	{
+		"name": "departments",
+		"description": "Lists all of the departments at ACME"
+	}],
+	"paths": {
+		"/departments": {
+			"get": {
+				"tags": ["departments"],
+				"summary": "Retrieve a list of the departments and load to Global Cache",
+				"description": "Retrieve a list of the departments and load to Cache",
+				"operationId": "loadDepartmentsCache",
+				"produces": ["application/json"],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"500": {
+						"description": "Something wrong in Server"
+					}
+				}
+			}
+		},
+		"/departments/{departmentNumber}": {
+			"get": {
+				"tags": ["departments"],
+				"summary": "Retrieve the details for a department from the Global Cache",
+				"description": "Retrieve the details for a department",
+				"operationId": "getDepartmentCache",
+				"produces": ["application/json"],
+				"parameters": [{
+					"name": "departmentNumber",
+					"in": "path",
+					"description": "The departmentNumber of the department",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"404": {
+						"description": "The department cannot be found"
+					},
+					"200": {
+						"description": "OK"
+					},
+					"500": {
+						"description": "Something wrong in Server"
+					}
+				}
+			},			
+			
+			"put": {
+				"tags": ["departments"],
+				"summary": "Updates an existing department in the cache",
+				"description": "Updates an existing department in the cache",
+				"operationId": "updateDepartmentCache",
+				"consumes": ["application/json"],
+				"produces": ["application/json"],
+				"parameters": [{
+					"in": "body",
+					"name": "body",
+					"description": "",
+					"required": false,
+					"schema": {
+						"$ref": "#/definitions/Department"
+					}
+				},
+				{
+					"name": "departmentNumber",
+					"in": "path",
+					"description": "The departmentNumber of the department to be updated",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"404": {
+						"description": "The department cannot be found"
+					},
+					"200": {
+						"description": "Updated"
+					},
+					"400": {
+						"description": "There was a problem with the request"
+					},
+					"500": {
+						"description": "A problem occurred updating the department"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["departments"],
+				"summary": "Deletes an existing department",
+				"description": "Deletes an existing department in the database.",
+				"operationId": "deleteDepartmentCache",
+				"produces": ["application/json"],
+				"parameters": [{
+					"name": "departmentNumber",
+					"in": "path",
+					"description": "The departmentNumber of the department to be deleted",
+					"required": true,
+					"type": "string"
+				}],
+				"responses": {
+					"204": {
+						"description": "Deleted"
+					},
+					"404": {
+						"description": "The department cannot be found"
+					},
+					"500": {
+						"description": "A problem occurred deleting the department"
+					}
+				}
+			}
+
+		}
+	},
+	"definitions": {
+		"Department": {
+			"required": ["departmentNumber",
+			"location",
+			"name"],
+			"properties": {
+				"departmentNumber": {
+					"type": "string",
+					"description": "Department number"
+				},
+				"admrdept": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string",
+					"description": "Department name"
+				},
+				"location": {
+					"type": "string",
+					"description": "Location"
+				}
+			},
+			"description": "Department resource representation"
+		}
+
+	}
+}

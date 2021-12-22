@@ -1,0 +1,33 @@
+# Vocabulary Properties
+uuid = d193e9f4-37d0-42f0-8ba8-c3eb81df916c
+
+# sample.iibadmin.EMPLOYEEType
+sample.iibadmin.EMPLOYEEType#concept.label = EMPLOYEEType
+sample.iibadmin.EMPLOYEEType.BIRTHDATE#phrase.action = set the BIRTHDATE of {this} to {BIRTHDATE}
+sample.iibadmin.EMPLOYEEType.BIRTHDATE#phrase.navigation = {BIRTHDATE} of {this}
+sample.iibadmin.EMPLOYEEType.BONUS#phrase.action = set the BONUS of {this} to {BONUS}
+sample.iibadmin.EMPLOYEEType.BONUS#phrase.navigation = {BONUS} of {this}
+sample.iibadmin.EMPLOYEEType.COMM#phrase.action = set the COMM of {this} to {COMM}
+sample.iibadmin.EMPLOYEEType.COMM#phrase.navigation = {COMM} of {this}
+sample.iibadmin.EMPLOYEEType.EDLEVEL#phrase.action = set the EDLEVEL of {this} to {EDLEVEL}
+sample.iibadmin.EMPLOYEEType.EDLEVEL#phrase.navigation = {EDLEVEL} of {this}
+sample.iibadmin.EMPLOYEEType.EMPNO#phrase.action = set the EMPNO of {this} to {EMPNO}
+sample.iibadmin.EMPLOYEEType.EMPNO#phrase.navigation = {EMPNO} of {this}
+sample.iibadmin.EMPLOYEEType.FIRSTNME#phrase.action = set the FIRSTNME of {this} to {FIRSTNME}
+sample.iibadmin.EMPLOYEEType.FIRSTNME#phrase.navigation = {FIRSTNME} of {this}
+sample.iibadmin.EMPLOYEEType.HIREDATE#phrase.action = set the HIREDATE of {this} to {HIREDATE}
+sample.iibadmin.EMPLOYEEType.HIREDATE#phrase.navigation = {HIREDATE} of {this}
+sample.iibadmin.EMPLOYEEType.JOB#phrase.action = set the JOB of {this} to {JOB}
+sample.iibadmin.EMPLOYEEType.JOB#phrase.navigation = {JOB} of {this}
+sample.iibadmin.EMPLOYEEType.LASTNAME#phrase.action = set the LASTNAME of {this} to {LASTNAME}
+sample.iibadmin.EMPLOYEEType.LASTNAME#phrase.navigation = {LASTNAME} of {this}
+sample.iibadmin.EMPLOYEEType.MIDINIT#phrase.action = set the MIDINIT of {this} to {MIDINIT}
+sample.iibadmin.EMPLOYEEType.MIDINIT#phrase.navigation = {MIDINIT} of {this}
+sample.iibadmin.EMPLOYEEType.PHONENO#phrase.action = set the PHONENO of {this} to {PHONENO}
+sample.iibadmin.EMPLOYEEType.PHONENO#phrase.navigation = {PHONENO} of {this}
+sample.iibadmin.EMPLOYEEType.SALARY#phrase.action = set the SALARY of {this} to {SALARY}
+sample.iibadmin.EMPLOYEEType.SALARY#phrase.navigation = {SALARY} of {this}
+sample.iibadmin.EMPLOYEEType.SEX#phrase.action = set the SEX of {this} to {SEX}
+sample.iibadmin.EMPLOYEEType.SEX#phrase.navigation = {SEX} of {this}
+sample.iibadmin.EMPLOYEEType.WORKDEPT#phrase.action = set the WORKDEPT of {this} to {WORKDEPT}
+sample.iibadmin.EMPLOYEEType.WORKDEPT#phrase.navigation = {WORKDEPT} of {this}

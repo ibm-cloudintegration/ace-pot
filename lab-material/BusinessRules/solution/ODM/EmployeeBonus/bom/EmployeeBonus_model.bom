@@ -1,0 +1,28 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/EmployeeBonus/C:/student10/BusinessRules/resources/EmployeeServiceInterface/sample/iibadmin/SAMPLE_EMPLOYEE.xsd"
+property uuid "ca5a6d70-c3e5-476a-a5b2-42f3a8b5bef4"
+package sample.iibadmin;
+
+
+public class EMPLOYEEType
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public ilog.rules.xml.types.IlrDate BIRTHDATE domain 0,1;
+    public java.math.BigDecimal BONUS domain 0,1;
+    public java.math.BigDecimal COMM domain 0,1;
+    public short EDLEVEL;
+    public string EMPNO;
+    public string FIRSTNME;
+    public ilog.rules.xml.types.IlrDate HIREDATE domain 0,1;
+    public string JOB domain 0,1;
+    public string LASTNAME;
+    public string MIDINIT domain 0,1;
+    public string PHONENO domain 0,1;
+    public java.math.BigDecimal SALARY domain 0,1;
+    public string SEX domain 0,1;
+    public string WORKDEPT domain 0,1;
+    public EMPLOYEEType();
+    public void setUnknownEDLEVEL();
+}
+

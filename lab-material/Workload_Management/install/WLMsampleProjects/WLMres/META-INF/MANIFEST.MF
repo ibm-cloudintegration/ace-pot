@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: IBM
+Bundle-Localization: plugin
+Bundle-Name: %Plugin.name
+Bundle-SymbolicName: com.ibm.etools.mft.samples.workloadmanagement.res
+ ; singleton:=true
+Require-Bundle: com.ibm.etools.mft.eou;bundle-version="[9.0.0,10.0.0)"
+ ;resolution:=optional
+Bundle-Version: 9.0.0.v20130521-1901
+Bundle-ManifestVersion: 2
+

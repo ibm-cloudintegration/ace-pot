@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore">
+  <name>EmployeeBonus</name>
+  <uuid>e5a58d95-c5f3-4008-911b-60bce6443ca1</uuid>
+  <outputLocation>output</outputLocation>
+  <binOutputLocation>bin</binOutputLocation>
+  <categories>any</categories>
+  <rulesetProperties></rulesetProperties>
+  <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
+    <entries xsi:type="ilog.rules.studio.model.xom:DynamicXOMPathEntry" name="SAMPLE_EMPLOYEE.xsd" url="file:C:/student10/BusinessRules/resources/EmployeeServiceInterface/sample/iibadmin/SAMPLE_EMPLOYEE.xsd" kind="XSD" rootPackage="sample.iibadmin" namespace="http://sample/iibadmin">
+      <dependencies name="DBResp.xsd" url="file:C:/student10/BusinessRules/resources/EmployeeServiceInterface/DBResp.xsd" kind="XSD" rootPackage="" namespace=""/>
+    </entries>
+    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY" exported="false"/>
+  </paths>
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="EmployeeBonus_model" url="platform:/EmployeeBonus/bom/EmployeeBonus_model.bom" origin="xom:/EmployeeBonus/C:/student10/BusinessRules/resources/EmployeeServiceInterface/sample/iibadmin/SAMPLE_EMPLOYEE.xsd"/>
+  </paths>
+  <parameters name="employee" type="sample.iibadmin.EMPLOYEEType" initialValue="" verbalization="the employee" direction="IN_OUT"/>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
+    <name>rules</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.bom:BOMFolder">
+    <name>bom</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.rule:TemplateFolder">
+    <name>templates</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
+    <name>queries</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:ResourceFolder">
+    <name>resources</name>
+  </modelFolders>
+  <schemaDependencies location="C:/student10/BusinessRules/resources/EmployeeServiceInterface/DBResp.xsd" namespace=""/>
+  <schemaDependencies location="C:/student10/BusinessRules/resources/EmployeeServiceInterface/sample/iibadmin/SAMPLE_EMPLOYEE.xsd" namespace="http://sample/iibadmin"/>
+</ilog.rules.studio.model.base:RuleProject>

@@ -1,0 +1,9 @@
+
+
+CREATE COMPUTE MODULE Test_propagate_loop_Borrow_abit
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot = InputRoot;
+		RETURN TRUE;
+End;
+END MODULE;

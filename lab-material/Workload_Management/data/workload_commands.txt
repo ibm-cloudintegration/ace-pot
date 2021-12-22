@@ -1,0 +1,19 @@
+mqsicreatepolicy IB9NODE -t WorkloadManagement -l SampleWLMPolicy -f WLMSamplePolicy.xml
+
+mqsiattachpolicy IB9NODE -e WorkloadManagement -k WLMSample_ProductSales -m WLMSample_ProductSales_Producer -t WorkloadManagement -l SampleWLMPolicy
+
+cd C:\student\Workload_Management\resources\WLMdemo\WLM_not_and_max
+
+run_wlm_list.bat
+
+run_wlm_con.bat
+
+run_wlm_prod.bat
+
+mqsistopmsgflow IB9NODE -e WorkloadManagement -m Account_management
+
+mqsistopmsgflow IB9NODE -e WorkloadManagement -k WLM_hung_flow
+
+mqsistopmsgflow IB9NODE -e WorkloadManagement -k WLM_hung_flow -f
+
+mqsistopmsgflow IB9NODE -e WorkloadManagement -k WLM_hung_flow -f restartExecutionGroup

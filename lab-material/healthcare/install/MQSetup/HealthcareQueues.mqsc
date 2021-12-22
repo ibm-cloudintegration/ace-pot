@@ -1,0 +1,2 @@
+define ql(DICOM) replace
+define ql(DEVICE.OUT) replace

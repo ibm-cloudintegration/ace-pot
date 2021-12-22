@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessagePool xmlns="http://wwww.ibm.com/iib/test/1.0.0">
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeServiceInterface/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="getEmployeeResponse" WSDL_OPERATION_NAME="getEmployee" WSDL_OPERATION_IN_NAME="getEmployeeRequest" timestamp="1426608668246" nodeId="FCMComposite_1_1" name="Get employee 000012 (not in DB)" id="1426608668246-342">
+        <plainText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tns0:Envelope xmlns:tns0=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:Q10=&quot;http://sample/iibadmin&quot; xmlns:tns1=&quot;http://EmployeeService&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xD;
+  &lt;tns0:Header/&gt;&#xD;
+  &lt;tns0:Body&gt;&#xD;
+    &lt;tns1:getEmployee&gt;&#xD;
+      &lt;Q10:EMPLOYEE&gt;&#xD;
+        &lt;EMPNO&gt;000012&lt;/EMPNO&gt;&#xD;
+        &lt;FIRSTNME&gt;FIRSTNME&lt;/FIRSTNME&gt;&#xD;
+        &lt;MIDINIT&gt;MIDINIT&lt;/MIDINIT&gt;&#xD;
+        &lt;LASTNAME&gt;LASTNAME&lt;/LASTNAME&gt;&#xD;
+        &lt;WORKDEPT&gt;WORKDEPT&lt;/WORKDEPT&gt;&#xD;
+        &lt;PHONENO&gt;PHONENO&lt;/PHONENO&gt;&#xD;
+        &lt;HIREDATE&gt;2002-01-01&lt;/HIREDATE&gt;&#xD;
+        &lt;JOB&gt;JOB&lt;/JOB&gt;&#xD;
+        &lt;EDLEVEL&gt;0&lt;/EDLEVEL&gt;&#xD;
+        &lt;SEX&gt;SEX&lt;/SEX&gt;&#xD;
+        &lt;BIRTHDATE&gt;2002-01-01&lt;/BIRTHDATE&gt;&#xD;
+        &lt;SALARY&gt;0&lt;/SALARY&gt;&#xD;
+        &lt;BONUS&gt;0&lt;/BONUS&gt;&#xD;
+        &lt;COMM&gt;0&lt;/COMM&gt;&#xD;
+      &lt;/Q10:EMPLOYEE&gt;&#xD;
+    &lt;/tns1:getEmployee&gt;&#xD;
+  &lt;/tns0:Body&gt;&#xD;
+&lt;/tns0:Envelope&gt;</plainText>
+    </SOAPInputMessage>
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeServiceInterface/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="getEmployeeResponse" WSDL_OPERATION_NAME="getEmployee" WSDL_OPERATION_IN_NAME="getEmployeeRequest" timestamp="1426609044688" nodeId="FCMComposite_1_1" name="Get employee 0000123 (key too long, gives SQL error)" id="1426609044688-1276">
+        <plainText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tns0:Envelope xmlns:tns0=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:Q10=&quot;http://sample/iibadmin&quot; xmlns:tns1=&quot;http://EmployeeService&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xD;
+  &lt;tns0:Header/&gt;&#xD;
+  &lt;tns0:Body&gt;&#xD;
+    &lt;tns1:getEmployee&gt;&#xD;
+      &lt;Q10:EMPLOYEE&gt;&#xD;
+        &lt;EMPNO&gt;0000123&lt;/EMPNO&gt;&#xD;
+        &lt;FIRSTNME&gt;FIRSTNME&lt;/FIRSTNME&gt;&#xD;
+        &lt;MIDINIT&gt;MIDINIT&lt;/MIDINIT&gt;&#xD;
+        &lt;LASTNAME&gt;LASTNAME&lt;/LASTNAME&gt;&#xD;
+        &lt;WORKDEPT&gt;WORKDEPT&lt;/WORKDEPT&gt;&#xD;
+        &lt;PHONENO&gt;PHONENO&lt;/PHONENO&gt;&#xD;
+        &lt;HIREDATE&gt;2002-01-01&lt;/HIREDATE&gt;&#xD;
+        &lt;JOB&gt;JOB&lt;/JOB&gt;&#xD;
+        &lt;EDLEVEL&gt;0&lt;/EDLEVEL&gt;&#xD;
+        &lt;SEX&gt;SEX&lt;/SEX&gt;&#xD;
+        &lt;BIRTHDATE&gt;2002-01-01&lt;/BIRTHDATE&gt;&#xD;
+        &lt;SALARY&gt;0&lt;/SALARY&gt;&#xD;
+        &lt;BONUS&gt;0&lt;/BONUS&gt;&#xD;
+        &lt;COMM&gt;0&lt;/COMM&gt;&#xD;
+      &lt;/Q10:EMPLOYEE&gt;&#xD;
+    &lt;/tns1:getEmployee&gt;&#xD;
+  &lt;/tns0:Body&gt;&#xD;
+&lt;/tns0:Envelope&gt;</plainText>
+    </SOAPInputMessage>
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeServiceInterface/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="getEmployeeResponse" WSDL_OPERATION_NAME="getEmployee" WSDL_OPERATION_IN_NAME="getEmployeeRequest" timestamp="1426608469196" nodeId="FCMComposite_1_1" name="Get employee 000010" id="1426608469196-6">
+        <plainText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tns0:Envelope xmlns:tns0=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:Q10=&quot;http://sample/iibadmin&quot; xmlns:tns1=&quot;http://EmployeeService&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xD;
+  &lt;tns0:Header/&gt;&#xD;
+  &lt;tns0:Body&gt;&#xD;
+    &lt;tns1:getEmployee&gt;&#xD;
+      &lt;Q10:EMPLOYEE&gt;&#xD;
+        &lt;EMPNO&gt;000050&lt;/EMPNO&gt;&#xD;
+        &lt;FIRSTNME&gt;FIRSTNME&lt;/FIRSTNME&gt;&#xD;
+        &lt;MIDINIT&gt;MIDINIT&lt;/MIDINIT&gt;&#xD;
+        &lt;LASTNAME&gt;LASTNAME&lt;/LASTNAME&gt;&#xD;
+        &lt;WORKDEPT&gt;WORKDEPT&lt;/WORKDEPT&gt;&#xD;
+        &lt;PHONENO&gt;PHONENO&lt;/PHONENO&gt;&#xD;
+        &lt;HIREDATE&gt;2002-01-01&lt;/HIREDATE&gt;&#xD;
+        &lt;JOB&gt;JOB&lt;/JOB&gt;&#xD;
+        &lt;EDLEVEL&gt;0&lt;/EDLEVEL&gt;&#xD;
+        &lt;SEX&gt;SEX&lt;/SEX&gt;&#xD;
+        &lt;BIRTHDATE&gt;2002-01-01&lt;/BIRTHDATE&gt;&#xD;
+        &lt;SALARY&gt;0&lt;/SALARY&gt;&#xD;
+        &lt;BONUS&gt;0&lt;/BONUS&gt;&#xD;
+        &lt;COMM&gt;0&lt;/COMM&gt;&#xD;
+      &lt;/Q10:EMPLOYEE&gt;&#xD;
+    &lt;/tns1:getEmployee&gt;&#xD;
+  &lt;/tns0:Body&gt;&#xD;
+&lt;/tns0:Envelope&gt;</plainText>
+    </SOAPInputMessage>
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeServiceInterface/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="checkBonusResponse" WSDL_OPERATION_NAME="checkBonus" WSDL_OPERATION_IN_NAME="checkBonusRequest" timestamp="1426688246822" nodeId="FCMComposite_1_1" name="Check bonus Salary=80000, Bonus=800" id="1426688246822-4323">
+        <plainText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tns0:Envelope xmlns:tns0=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:Q10=&quot;http://sample/iibadmin&quot; xmlns:tns1=&quot;http://EmployeeService&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xD;
+  &lt;tns0:Header/&gt;&#xD;
+  &lt;tns0:Body&gt;&#xD;
+    &lt;tns1:checkBonus&gt;&#xD;
+      &lt;Q10:EMPLOYEE&gt;&#xD;
+        &lt;EMPNO&gt;000050&lt;/EMPNO&gt;&#xD;
+        &lt;FIRSTNME&gt;FIRSTNME&lt;/FIRSTNME&gt;&#xD;
+        &lt;MIDINIT&gt;MIDINIT&lt;/MIDINIT&gt;&#xD;
+        &lt;LASTNAME&gt;LASTNAME&lt;/LASTNAME&gt;&#xD;
+        &lt;WORKDEPT&gt;B01&lt;/WORKDEPT&gt;&#xD;
+        &lt;PHONENO&gt;1234&lt;/PHONENO&gt;&#xD;
+        &lt;HIREDATE&gt;2002-01-01&lt;/HIREDATE&gt;&#xD;
+        &lt;JOB&gt;JOB&lt;/JOB&gt;&#xD;
+        &lt;EDLEVEL&gt;9&lt;/EDLEVEL&gt;&#xD;
+        &lt;SEX&gt;M&lt;/SEX&gt;&#xD;
+        &lt;BIRTHDATE&gt;2002-01-01&lt;/BIRTHDATE&gt;&#xD;
+        &lt;SALARY&gt;80000&lt;/SALARY&gt;&#xD;
+        &lt;BONUS&gt;800&lt;/BONUS&gt;&#xD;
+        &lt;COMM&gt;0&lt;/COMM&gt;&#xD;
+      &lt;/Q10:EMPLOYEE&gt;&#xD;
+    &lt;/tns1:checkBonus&gt;&#xD;
+  &lt;/tns0:Body&gt;&#xD;
+&lt;/tns0:Envelope&gt;</plainText>
+    </SOAPInputMessage>
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeServiceInterface/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="checkBonusResponse" WSDL_OPERATION_NAME="checkBonus" WSDL_OPERATION_IN_NAME="checkBonusRequest" timestamp="1426688495497" nodeId="FCMComposite_1_1" name="Check bonus Salary=2000, Bonus=350" id="1426688495497-4953">
+        <plainText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tns0:Envelope xmlns:tns0=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:Q10=&quot;http://sample/iibadmin&quot; xmlns:tns1=&quot;http://EmployeeService&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xD;
+  &lt;tns0:Header/&gt;&#xD;
+  &lt;tns0:Body&gt;&#xD;
+    &lt;tns1:checkBonus&gt;&#xD;
+      &lt;Q10:EMPLOYEE&gt;&#xD;
+        &lt;EMPNO&gt;000050&lt;/EMPNO&gt;&#xD;
+        &lt;FIRSTNME&gt;FIRSTNME&lt;/FIRSTNME&gt;&#xD;
+        &lt;MIDINIT&gt;MIDINIT&lt;/MIDINIT&gt;&#xD;
+        &lt;LASTNAME&gt;LASTNAME&lt;/LASTNAME&gt;&#xD;
+        &lt;WORKDEPT&gt;B01&lt;/WORKDEPT&gt;&#xD;
+        &lt;PHONENO&gt;1234&lt;/PHONENO&gt;&#xD;
+        &lt;HIREDATE&gt;2002-01-01&lt;/HIREDATE&gt;&#xD;
+        &lt;JOB&gt;JOB&lt;/JOB&gt;&#xD;
+        &lt;EDLEVEL&gt;9&lt;/EDLEVEL&gt;&#xD;
+        &lt;SEX&gt;M&lt;/SEX&gt;&#xD;
+        &lt;BIRTHDATE&gt;2002-01-01&lt;/BIRTHDATE&gt;&#xD;
+        &lt;SALARY&gt;2000&lt;/SALARY&gt;&#xD;
+        &lt;BONUS&gt;350&lt;/BONUS&gt;&#xD;
+        &lt;COMM&gt;0&lt;/COMM&gt;&#xD;
+      &lt;/Q10:EMPLOYEE&gt;&#xD;
+    &lt;/tns1:checkBonus&gt;&#xD;
+  &lt;/tns0:Body&gt;&#xD;
+&lt;/tns0:Envelope&gt;</plainText>
+    </SOAPInputMessage>
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeServiceInterface/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="checkBonusResponse" WSDL_OPERATION_NAME="checkBonus" WSDL_OPERATION_IN_NAME="checkBonusRequest" timestamp="1426688609375" nodeId="FCMComposite_1_1" name="Check bonus Salary=215000, Bonus=1250" id="1426688609375-5721">
+        <plainText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tns0:Envelope xmlns:tns0=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:Q10=&quot;http://sample/iibadmin&quot; xmlns:tns1=&quot;http://EmployeeService&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xD;
+  &lt;tns0:Header/&gt;&#xD;
+  &lt;tns0:Body&gt;&#xD;
+    &lt;tns1:checkBonus&gt;&#xD;
+      &lt;Q10:EMPLOYEE&gt;&#xD;
+        &lt;EMPNO&gt;000050&lt;/EMPNO&gt;&#xD;
+        &lt;FIRSTNME&gt;FIRSTNME&lt;/FIRSTNME&gt;&#xD;
+        &lt;MIDINIT&gt;MIDINIT&lt;/MIDINIT&gt;&#xD;
+        &lt;LASTNAME&gt;LASTNAME&lt;/LASTNAME&gt;&#xD;
+        &lt;WORKDEPT&gt;B01&lt;/WORKDEPT&gt;&#xD;
+        &lt;PHONENO&gt;1234&lt;/PHONENO&gt;&#xD;
+        &lt;HIREDATE&gt;2002-01-01&lt;/HIREDATE&gt;&#xD;
+        &lt;JOB&gt;JOB&lt;/JOB&gt;&#xD;
+        &lt;EDLEVEL&gt;9&lt;/EDLEVEL&gt;&#xD;
+        &lt;SEX&gt;M&lt;/SEX&gt;&#xD;
+        &lt;BIRTHDATE&gt;2002-01-01&lt;/BIRTHDATE&gt;&#xD;
+        &lt;SALARY&gt;215000&lt;/SALARY&gt;&#xD;
+        &lt;BONUS&gt;1250&lt;/BONUS&gt;&#xD;
+        &lt;COMM&gt;0&lt;/COMM&gt;&#xD;
+      &lt;/Q10:EMPLOYEE&gt;&#xD;
+    &lt;/tns1:checkBonus&gt;&#xD;
+  &lt;/tns0:Body&gt;&#xD;
+&lt;/tns0:Envelope&gt;</plainText>
+    </SOAPInputMessage>
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeServiceInterface/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="checkBonusResponse" WSDL_OPERATION_NAME="checkBonus" WSDL_OPERATION_IN_NAME="checkBonusRequest" timestamp="1426688577171" nodeId="FCMComposite_1_1" name="Check bonus Salary=32000, Bonus=250" id="1426688577171-5441">
+        <plainText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tns0:Envelope xmlns:tns0=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:Q10=&quot;http://sample/iibadmin&quot; xmlns:tns1=&quot;http://EmployeeService&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xD;
+  &lt;tns0:Header/&gt;&#xD;
+  &lt;tns0:Body&gt;&#xD;
+    &lt;tns1:checkBonus&gt;&#xD;
+      &lt;Q10:EMPLOYEE&gt;&#xD;
+        &lt;EMPNO&gt;000050&lt;/EMPNO&gt;&#xD;
+        &lt;FIRSTNME&gt;FIRSTNME&lt;/FIRSTNME&gt;&#xD;
+        &lt;MIDINIT&gt;MIDINIT&lt;/MIDINIT&gt;&#xD;
+        &lt;LASTNAME&gt;LASTNAME&lt;/LASTNAME&gt;&#xD;
+        &lt;WORKDEPT&gt;B01&lt;/WORKDEPT&gt;&#xD;
+        &lt;PHONENO&gt;1234&lt;/PHONENO&gt;&#xD;
+        &lt;HIREDATE&gt;2002-01-01&lt;/HIREDATE&gt;&#xD;
+        &lt;JOB&gt;JOB&lt;/JOB&gt;&#xD;
+        &lt;EDLEVEL&gt;9&lt;/EDLEVEL&gt;&#xD;
+        &lt;SEX&gt;M&lt;/SEX&gt;&#xD;
+        &lt;BIRTHDATE&gt;2002-01-01&lt;/BIRTHDATE&gt;&#xD;
+        &lt;SALARY&gt;32000&lt;/SALARY&gt;&#xD;
+        &lt;BONUS&gt;250&lt;/BONUS&gt;&#xD;
+        &lt;COMM&gt;0&lt;/COMM&gt;&#xD;
+      &lt;/Q10:EMPLOYEE&gt;&#xD;
+    &lt;/tns1:checkBonus&gt;&#xD;
+  &lt;/tns0:Body&gt;&#xD;
+&lt;/tns0:Envelope&gt;</plainText>
+    </SOAPInputMessage>
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeServiceInterface/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="checkBonusResponse" WSDL_OPERATION_NAME="checkBonus" WSDL_OPERATION_IN_NAME="checkBonusRequest" timestamp="1426688547638" nodeId="FCMComposite_1_1" name="Check bonus Salary=32000, Bonus=100" id="1426688547638-5185">
+        <plainText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tns0:Envelope xmlns:tns0=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:Q10=&quot;http://sample/iibadmin&quot; xmlns:tns1=&quot;http://EmployeeService&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xD;
+  &lt;tns0:Header/&gt;&#xD;
+  &lt;tns0:Body&gt;&#xD;
+    &lt;tns1:checkBonus&gt;&#xD;
+      &lt;Q10:EMPLOYEE&gt;&#xD;
+        &lt;EMPNO&gt;000050&lt;/EMPNO&gt;&#xD;
+        &lt;FIRSTNME&gt;FIRSTNME&lt;/FIRSTNME&gt;&#xD;
+        &lt;MIDINIT&gt;MIDINIT&lt;/MIDINIT&gt;&#xD;
+        &lt;LASTNAME&gt;LASTNAME&lt;/LASTNAME&gt;&#xD;
+        &lt;WORKDEPT&gt;B01&lt;/WORKDEPT&gt;&#xD;
+        &lt;PHONENO&gt;1234&lt;/PHONENO&gt;&#xD;
+        &lt;HIREDATE&gt;2002-01-01&lt;/HIREDATE&gt;&#xD;
+        &lt;JOB&gt;JOB&lt;/JOB&gt;&#xD;
+        &lt;EDLEVEL&gt;9&lt;/EDLEVEL&gt;&#xD;
+        &lt;SEX&gt;M&lt;/SEX&gt;&#xD;
+        &lt;BIRTHDATE&gt;2002-01-01&lt;/BIRTHDATE&gt;&#xD;
+        &lt;SALARY&gt;32000&lt;/SALARY&gt;&#xD;
+        &lt;BONUS&gt;100&lt;/BONUS&gt;&#xD;
+        &lt;COMM&gt;0&lt;/COMM&gt;&#xD;
+      &lt;/Q10:EMPLOYEE&gt;&#xD;
+    &lt;/tns1:checkBonus&gt;&#xD;
+  &lt;/tns0:Body&gt;&#xD;
+&lt;/tns0:Envelope&gt;</plainText>
+    </SOAPInputMessage>
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeServiceInterface/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="checkBonusResponse" WSDL_OPERATION_NAME="checkBonus" WSDL_OPERATION_IN_NAME="checkBonusRequest" timestamp="1430672274001" nodeId="FCMComposite_1_1" name="Check bonus Salary=18000, Bonus=150" id="1430672274001-856">
+        <plainText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tns0:Envelope xmlns:tns0=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:Q10=&quot;http://sample/iibadmin&quot; xmlns:tns1=&quot;http://EmployeeService&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xD;
+  &lt;tns0:Header/&gt;&#xD;
+  &lt;tns0:Body&gt;&#xD;
+    &lt;tns1:checkBonus&gt;&#xD;
+      &lt;Q10:EMPLOYEE&gt;&#xD;
+        &lt;EMPNO&gt;000050&lt;/EMPNO&gt;&#xD;
+        &lt;FIRSTNME&gt;FIRSTNME&lt;/FIRSTNME&gt;&#xD;
+        &lt;MIDINIT&gt;MIDINIT&lt;/MIDINIT&gt;&#xD;
+        &lt;LASTNAME&gt;LASTNAME&lt;/LASTNAME&gt;&#xD;
+        &lt;WORKDEPT&gt;B01&lt;/WORKDEPT&gt;&#xD;
+        &lt;PHONENO&gt;1234&lt;/PHONENO&gt;&#xD;
+        &lt;HIREDATE&gt;2002-01-01&lt;/HIREDATE&gt;&#xD;
+        &lt;JOB&gt;JOB&lt;/JOB&gt;&#xD;
+        &lt;EDLEVEL&gt;9&lt;/EDLEVEL&gt;&#xD;
+        &lt;SEX&gt;M&lt;/SEX&gt;&#xD;
+        &lt;BIRTHDATE&gt;2002-01-01&lt;/BIRTHDATE&gt;&#xD;
+        &lt;SALARY&gt;18000&lt;/SALARY&gt;&#xD;
+        &lt;BONUS&gt;150&lt;/BONUS&gt;&#xD;
+        &lt;COMM&gt;0&lt;/COMM&gt;&#xD;
+      &lt;/Q10:EMPLOYEE&gt;&#xD;
+    &lt;/tns1:checkBonus&gt;&#xD;
+  &lt;/tns0:Body&gt;&#xD;
+&lt;/tns0:Envelope&gt;</plainText>
+    </SOAPInputMessage>
+    <SOAPInputMessage WSDL_URI="platform:/resource/EmployeeServiceInterface/EmployeeService.wsdl" WSDL_OPERATION_OUT_NAME="updEmployeeResponse" WSDL_OPERATION_NAME="updEmployee" WSDL_OPERATION_IN_NAME="updEmployeeRequest" timestamp="1426683873737" nodeId="FCMComposite_1_1" name="Update employee 000020" id="1426683873737-336">
+        <plainText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tns0:Envelope xmlns:tns0=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:Q10=&quot;http://sample/iibadmin&quot; xmlns:tns1=&quot;http://EmployeeService&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&#xD;
+  &lt;tns0:Header/&gt;&#xD;
+  &lt;tns0:Body&gt;&#xD;
+    &lt;tns1:updEmployee&gt;&#xD;
+      &lt;Q10:EMPLOYEE&gt;&#xD;
+        &lt;EMPNO&gt;EMPNO&lt;/EMPNO&gt;&#xD;
+        &lt;FIRSTNME&gt;FIRSTNME&lt;/FIRSTNME&gt;&#xD;
+        &lt;MIDINIT&gt;MIDINIT&lt;/MIDINIT&gt;&#xD;
+        &lt;LASTNAME&gt;LASTNAME&lt;/LASTNAME&gt;&#xD;
+        &lt;WORKDEPT&gt;WORKDEPT&lt;/WORKDEPT&gt;&#xD;
+        &lt;PHONENO&gt;PHONENO&lt;/PHONENO&gt;&#xD;
+        &lt;HIREDATE&gt;2002-01-01&lt;/HIREDATE&gt;&#xD;
+        &lt;JOB&gt;JOB&lt;/JOB&gt;&#xD;
+        &lt;EDLEVEL&gt;0&lt;/EDLEVEL&gt;&#xD;
+        &lt;SEX&gt;SEX&lt;/SEX&gt;&#xD;
+        &lt;BIRTHDATE&gt;2002-01-01&lt;/BIRTHDATE&gt;&#xD;
+        &lt;SALARY&gt;0&lt;/SALARY&gt;&#xD;
+        &lt;BONUS&gt;0&lt;/BONUS&gt;&#xD;
+        &lt;COMM&gt;0&lt;/COMM&gt;&#xD;
+      &lt;/Q10:EMPLOYEE&gt;&#xD;
+    &lt;/tns1:updEmployee&gt;&#xD;
+  &lt;/tns0:Body&gt;&#xD;
+&lt;/tns0:Envelope&gt;</plainText>
+    </SOAPInputMessage>
+</MessagePool>

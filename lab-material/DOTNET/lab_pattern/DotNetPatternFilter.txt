@@ -1,0 +1,5 @@
+		If ( FIELDNAME(Body.(XMLNSC.Folder)*[<]) = 'TransferMoneyResponse') then
+			return TRUE;
+		Else
+			return FALSE;
+		END IF;

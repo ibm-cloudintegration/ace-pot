@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/BlobMessage.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="buildSMS">
+        <output path="mb:msg(BLOB,assembly,BLOB,LocalEnvironment,Properties)"/>
+        <expression>
+            <output path="BLOB/text()"/>
+            <code lang="xpath">iib:hexBinaryValue(fn:concat('To=447802907279&amp;From=447481343185&amp;Body=HelloFromIIB, price is: ', '10'))</code>
+        </expression>
+    </mappingDeclaration>
+</mappingRoot>

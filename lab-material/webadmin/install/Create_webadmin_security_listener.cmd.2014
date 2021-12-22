@@ -1,0 +1,33 @@
+set node1=%~1
+set port1=%~2
+@echo on
+
+REM *****  Change port number for web admin  ******
+REM echo Setting web admin htps listener to %port1%
+REM mqsichangeproperties %node1% -b webadmin -o HTTPSConnector -n port -v %port1%
+
+REM echo Setting web admin listener to use SSL
+REM mqsichangeproperties %node1% -b webadmin -o server -n enabled,enableSSL -v true,true
+
+REM echo Setting web admin keystore to IB10.jks
+REM mqsichangeproperties %node1% -b webadmin -o HTTPSConnector -n keystoreFile -v c:\student10\webadmin\keystore\IB10.jks
+
+REM echo Setting keystore password for %node1%
+REM mqsichangeproperties %node1% -b webadmin -o HTTPSConnector -n keystorePass -v passw0rd
+
+
+******  Use this section temporariliy until Studio has implemented SSL   ************
+REM *****  Change port number for web admin  ******
+echo Setting web admin htp listener to %port1%
+mqsichangeproperties %node1% -b webadmin -o HTTPConnector -n port -v %port1%
+
+echo Enabling web admin listener
+mqsichangeproperties %node1% -b webadmin -o server -n enabled,enableSSL -v true,false
+
+
+
+
+
+
+
+

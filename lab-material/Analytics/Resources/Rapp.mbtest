@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.etools.mft.unittest.core.models.client="http:///com/ibm/etools/mft/unittest/core/models/client.ecore" xmlns:com.ibm.wbit.comptest.common.models.event="http:///com/ibm/etools/mft/unittest/common/models/event.ecore" xmlns:http="http:///com/ibm//etools/mft/unittest/common/model2/http" xmlns:jms="http:///com/ibm//etools/mft/unittest/common/model2/jms" xmlns:model2="http:///com/ibm//etools/mft/unittest/common/model2" xmlns:mq="http:///com/ibm//etools/mft/unittest/common/model2/mq">
+  <com.ibm.etools.mft.unittest.core.models.client:EclipseClient iD="1402668563134-0" eventTrace="/1" clientID="1402668563134-0">
+    <scopes xsi:type="model2:FlowTestScope" name="Configuration" iD="default">
+      <testModules xsi:type="model2:TestMsgFlow" name="/Rapp/GotoAnalyticsNode.msgflow" iD="1402668563134-4">
+        <inputNodes xsi:type="http:HTTPInputNode" nodeName="HTTP Input" urlSpecifier="/Rapp"/>
+      </testModules>
+      <testModules xsi:type="model2:TestAppOrLib" name="Rapp" iD="1402668563134-5"/>
+      <settings xsi:type="model2:FlowSettings"/>
+      <settings xsi:type="model2:DeploymentSettings" runtimeEnvType="Integration Bus v9.0" runtimeInstance="localhost^IB10NODE^server1^0" deployOption="DEPLOY_NEVER" barFile="/Rapp/ManualBuildofRapp.bar"/>
+      <settings xsi:type="mq:MQSettings"/>
+      <settings xsi:type="jms:JMSSettings"/>
+      <settings xsi:type="mq:MQMessageHeaders"/>
+      <settings xsi:type="jms:JMSMessageHeaders"/>
+      <messageHeaders xsi:type="mq:MQHeader" iD="1402668563134-3" headerName="Default Header"/>
+      <messageHeaders xsi:type="jms:JMSHeader" headerName="Default Header"/>
+    </scopes>
+  </com.ibm.etools.mft.unittest.core.models.client:EclipseClient>
+  <com.ibm.wbit.comptest.common.models.event:ExecutionEventTrace iD="1402668563134-1" children="/2"/>
+  <model2:InteractiveInputNodeInvocationEvent iD="1402996189687-223" timestamp="1402996189687" msgFlow="/Rapp/GotoAnalyticsNode.msgflow" nodeId="FCMComposite_1_1" testScopeID="default" nodeName="HTTP Input" nodeType="ComIbmWSInput.msgnode">
+    <request xsi:type="model2:TestMessage" iD="1402668563898-7">
+      <properties name="messageSource" stringValue="sourceView"/>
+      <properties name="WSDL_URI"/>
+      <properties name="WSDL_OPERATION_IN_NAME"/>
+      <properties name="WSDL_OPERATION_NAME"/>
+      <properties name="WSDL_OPERATION_OUT_NAME"/>
+      <properties name="plainText" stringValue="%3C%3Fxml+version%3D%221.0%22+encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Csampleiibadmin%3AEMPLOYEE+xmlns%3Asampleiibadmin%3D%22http%3A%2F%2Fsample%2Fiibadmin%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xsi%3AschemaLocation%3D%22http%3A%2F%2Fsample%2Fiibadmin+SAMPLE.xsd+%22%3E%0D%0A++%3CEMPNO%3E%3C%2FEMPNO%3E%0D%0A++%3CFIRSTNME%3E%3C%2FFIRSTNME%3E%0D%0A++%3CMIDINIT%3E%3C%2FMIDINIT%3E%0D%0A++%3CLASTNAME%3E%3C%2FLASTNAME%3E%0D%0A++%3CWORKDEPT%3E%3C%2FWORKDEPT%3E%0D%0A++%3CPHONENO%3E0%3C%2FPHONENO%3E%0D%0A++%3CHIREDATE%3E2001-01-01%3C%2FHIREDATE%3E%0D%0A++%3CJOB%3E%3C%2FJOB%3E%0D%0A++%3CEDLEVEL%3E19%3C%2FEDLEVEL%3E%0D%0A++%3CSEX%3EF%3C%2FSEX%3E%0D%0A++%3CBIRTHDATE%3E2001-01-01%3C%2FBIRTHDATE%3E%0D%0A++%3CSALARY%3E0.0%3C%2FSALARY%3E%0D%0A++%3CBONUS%3E0.0%3C%2FBONUS%3E%0D%0A++%3CCOMM%3E0.0%3C%2FCOMM%3E%0D%0A%3C%2Fsampleiibadmin%3AEMPLOYEE%3E"/>
+      <properties name="SHOW_HEX_VIEW"/>
+      <properties name="linkedFile"/>
+    </request>
+  </model2:InteractiveInputNodeInvocationEvent>
+</xmi:XMI>

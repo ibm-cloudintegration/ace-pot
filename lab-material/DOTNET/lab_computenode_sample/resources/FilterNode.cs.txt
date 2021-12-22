@@ -1,0 +1,28 @@
+        public override void Evaluate(NBMessageAssembly inputAssembly)
+        {
+            NBOutputTerminal outTerminal = OutputTerminal("Out");
+            NBOutputTerminal altTerminal = OutputTerminal("Alternate");
+            NBOutputTerminal failureTerminal = OutputTerminal("Failure");
+
+            NBMessage inputMessage = inputAssembly.Message;
+            NBElement root = inputMessage.RootElement;
+
+
+            #region UserCode
+            // Add user code in this region to filter the message
+            // The following expression deliberately uses LastChild in
+            // preference to FirstChild in case an XML Declaration is present!
+            switch (root[NBParsers.XMLNSC.ParserName].LastChild.Name)
+            {
+                case "LoyaltyProgram":
+                    outTerminal.Propagate(inputAssembly);
+                    break;
+                case "SaleEnvelope":
+                    altTerminal.Propagate(inputAssembly);
+                    break;
+                default:
+                    failureTerminal.Propagate(inputAssembly);
+                    break;
+            }
+            #endregion UserCode
+        }

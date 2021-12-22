@@ -1,0 +1,4 @@
+echo off
+set node1=%~1
+
+mqsicreateconfigurableservice %node1% -c JDBCProviders -o ODMDS -n type4DatasourceClassName,type4DriverClassName,databaseType,jdbcProviderXASupport,portNumber,connectionUrlFormatAttr5,connectionUrlFormatAttr4,serverName,connectionUrlFormatAttr3,connectionUrlFormatAttr2,connectionUrlFormatAttr1,environmentParms,maxConnectionPoolSize,description,jarsURL,databaseName,databaseVersion,securityIdentity,connectionUrlFormat -v "com.ibm.db2.jcc.DB2XADataSource","com.ibm.db2.jcc.DB2Driver","DB2 Universal Database","true","50000","","","localhost","","","","default_none","0","default_Description","C:\IBM\SQLLIB\java","ODMDS","10.1","ODMRESSecurityId","jdbc:db2://[serverName]:[portNumber]/[databaseName]:user=[user];password=[password];"

@@ -1,0 +1,28 @@
+assembly:
+  execute:
+    - HTTPInput:
+        title: HTTPInput
+        URLSpecifier: /web1
+        messageDomainProperty: JSON
+    - Compute:
+        title: Compute
+        validateMaster: inherit
+        computeMode: all
+        source: "SET OutputRoot.XMLNSC.html.body.h3 = 'test';\n\tDeclare inputEmpno char;\n\tset inputEmpno = InputRoot.JSON.Data.employeeNumber;\n\t    set OutputLocalEnvironment = InputLocalEnvironment;\n\t    SET OutputLocalEnvironment.Destination.HTTP.RequestLine.RequestURI = '/HR_Services/resources/employees/complete?employeeNumber='||inputEmpno;\n\t\t  "
+    - HTTPRequest:
+        title: HTTPRequest
+        hostnameChecking: false
+        validateMaster: inherit
+        URLSpecifier: 'http://betaworks-esb10:7800'
+        messageDomainProperty: JSON
+        httpMethod: GET
+    - MQOutput:
+        title: MQOutput
+        destinationMode: fixed
+        transactionMode: automatic
+        persistenceMode: automatic
+        validateMaster: inherit
+    - HTTPReply:
+        title: HTTPReply
+        validateMaster: inherit
+  catch: []

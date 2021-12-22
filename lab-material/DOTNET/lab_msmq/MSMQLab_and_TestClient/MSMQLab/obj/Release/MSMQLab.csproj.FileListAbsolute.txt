@@ -1,0 +1,5 @@
+C:\student10\DOTNET\lab_msmq\dll\MSMQLab.dll
+C:\student10\DOTNET\lab_msmq\dll\MSMQLab.pdb
+C:\student10\DOTNET\lab_msmq\MSMQLab_and_TestClient\MSMQLab\obj\Release\MSMQLab.csprojResolveAssemblyReference.cache
+C:\student10\DOTNET\lab_msmq\MSMQLab_and_TestClient\MSMQLab\obj\Release\MSMQLab.dll
+C:\student10\DOTNET\lab_msmq\MSMQLab_and_TestClient\MSMQLab\obj\Release\MSMQLab.pdb

@@ -1,0 +1,32 @@
+
+<ion-view title="Search"> 
+
+<ion-content padding="true">
+
+
+	<div class="card">
+	
+		<div class="list">
+			<label class="item item-input item-floating-label"> <span
+				class="input-label">Employee number</span> <input type="text"
+				placeholder="Employee number" ng-model="empNo">
+			</label>
+		</div>
+		
+		<div style="color: red; text-align: center">{{searchErrorMessage}}</div>
+	
+	
+		<div class="item item-divider">
+			<button class="button button-block button-positive"
+				ng-click="search(empNo)">Get Employee Data</button>
+		</div>
+	</div>
+
+</ion-content>
+<ion-footer-bar>		
+		<div>
+    		<img src="images/Betaworks_Logo.png">
+		</div>
+</ion-footer-bar>
+
+</ion-view>

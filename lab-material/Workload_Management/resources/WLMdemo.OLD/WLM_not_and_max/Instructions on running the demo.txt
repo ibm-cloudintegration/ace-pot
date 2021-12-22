@@ -1,0 +1,10 @@
+This demo has to be run using the default configuration broker and queue manager to work correctly.
+1, Import the project provided in the WLM_not_max_pi.zip file.
+2, Create the Queues WLM.IN1, WLM.IN2, WLM.OUT1 and WLM.OUT2 (file wlm.mqsc has the definitions).
+3, Deploy the flow int the project to an execution group.
+4, Start the following three applications:
+  -  run_wlm_prod.bat - produces work load on queue WLM.IN1
+  -  run_wlm_con.bat  - consumes work load from queue WLM.OUT1
+  -  run_wlm_list.bat - subscribes to a topic to listen for notification alerts (put in # to subscribe for all flows)
+These commands require a 64 jvm to run correctly.
+5, You can then add policies etc to control the flow rate and cause notifications to happen.

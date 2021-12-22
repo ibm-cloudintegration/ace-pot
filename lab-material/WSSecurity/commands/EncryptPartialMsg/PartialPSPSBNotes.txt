@@ -1,0 +1,9 @@
+(For PROVIDER) .. Consumer needs same set up ... 
+
+/*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/' and local-name()='Envelope']/*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/' and local-name()='Body']/*[namespace-uri()='http://EmployeeService' and local-name()='getEmployeeResponse']/empOut/*[namespace-uri()='http://sample/iibadmin' and local-name()='EMPLOYEE']/LASTNAME
+EncryptResponse
+(for XPATH xpression in policy set) 
+
+(In "Message Part Protection" section of PS: 
+
+EncryptResponse; Encryption; Response: No 

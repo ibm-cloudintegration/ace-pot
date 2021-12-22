@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+    <extension
+         point="com.ibm.etools.mft.eou.sample">
+   </extension>
+   <extension
+         point="com.ibm.etools.mft.eou.sampleProject">
+      <sample>
+	    <projectsetup
+            name="WLMSample_ProductSales"
+           nature="com.ibm.etools.msgbroker.tooling.applicationNature">
+            <import
+               dest=""
+               src="WLMSample_ProductSales.zip">
+            </import>
+        </projectsetup>
+  	    <projectsetup
+   			name="Run_slow_tcpip_app"
+   			nature="org.eclipse.jdt.core.javanature">
+   			<import   				
+              dest=""
+              src="Run_slow_tcpip_app.zip">
+   			</import>
+         </projectsetup>
+         <executionGroup
+            name="WorkloadManagementExecutionGroup">
+            <deployables
+               project="WLMSample_ProductSales">
+               <file name="WLMSample_ProductSales.bar" />
+            </deployables>
+         </executionGroup>
+         <openFileGroup>
+         </openFileGroup> 
+      </sample>
+   </extension>
+   
+   <extension
+         point="com.ibm.etools.mft.eou.sampleResources">
+   </extension>
+
+</plugin>

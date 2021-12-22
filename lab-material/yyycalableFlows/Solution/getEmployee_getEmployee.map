@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <inlinedXMLSchema><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+    <xsd:element name="employeeNumber" type="xsd:string"/>  
+</xsd:schema>]]></inlinedXMLSchema>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/BlobMessage.xsd" var="var"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var1"/>
+    <input path="db:database(/HRDB.dbm,HRDB,db:schema-tables(IIBADMIN,EMPLOYEE))" var="HRDB"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var2"/>
+    <output derivedFrom="MB:JSON_schema_in_swagger_document" path="/HR_Employee_and_Department_Services.json" var="var3"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="getEmployee_getEmployee">
+        <input derivedFrom="MB:JSON_operation_name:getEmployee" path="$var/mb:msg(BLOB,assembly,BLOB,Properties,LocalEnvironment)" var="ComIbmMessageAssembly_BLOB">
+            <cast derivedFrom="MB:JSON_path_query_parm:employeeNumber" path="$ComIbmMessageAssembly_BLOB/LocalEnvironment/REST/Input/Parameters/any" qualifier="employeeNumber" ref="var1"/>
+        </input>
+        <input path="$HRDB/db:select(fn:false(),ResultSet(IIBADMIN/EMPLOYEE/EMPNO,IIBADMIN/EMPLOYEE/FIRSTNME,IIBADMIN/EMPLOYEE/MIDINIT,IIBADMIN/EMPLOYEE/LASTNAME,IIBADMIN/EMPLOYEE/WORKDEPT,IIBADMIN/EMPLOYEE/PHONENO,IIBADMIN/EMPLOYEE/HIREDATE,IIBADMIN/EMPLOYEE/JOB,IIBADMIN/EMPLOYEE/EDLEVEL,IIBADMIN/EMPLOYEE/SEX,IIBADMIN/EMPLOYEE/BIRTHDATE,IIBADMIN/EMPLOYEE/SALARY,IIBADMIN/EMPLOYEE/BONUS,IIBADMIN/EMPLOYEE/COMM),db:where('IIBADMIN.EMPLOYEE.EMPNO LIKE  ?','?'=fn:concat('%', $ComIbmMessageAssembly_BLOB/LocalEnvironment/REST/Input/Parameters//employeeNumber, '%')))" var="dbselect"/>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var2/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON">
+            <cast derivedFrom="MB:JSON_operation_response" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}EmployeeResponse" ref="var3"/>
+        </output>
+        <move>
+            <input path="$ComIbmMessageAssembly_BLOB/Properties"/>
+            <output path="$ComIbmMessageAssembly_JSON/Properties"/>
+        </move>
+        <select ref="dbselect">
+            <input path="$dbselect/ResultSet"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)"/>
+            <foreach>
+                <input path="."/>
+                <output path="Employee/Item"/>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/EMPNO"/>
+                    <output path="EMPNO"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/FIRSTNME"/>
+                    <output path="FIRSTNME"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/MIDINIT"/>
+                    <output path="MIDINIT"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/LASTNAME"/>
+                    <output path="LASTNAME"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/WORKDEPT"/>
+                    <output path="WORKDEPT"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/PHONENO"/>
+                    <output path="PHONENO"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/HIREDATE"/>
+                    <output path="HIREDATE"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/JOB"/>
+                    <output path="JOB"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/EDLEVEL"/>
+                    <output path="EDLEVEL"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/SEX"/>
+                    <output path="SEX"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/BIRTHDATE"/>
+                    <output path="BIRTHDATE"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/SALARY"/>
+                    <output path="SALARY"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/BONUS"/>
+                    <output path="BONUS"/>
+                </move>
+                <move automap="true">
+                    <input path="IIBADMIN/EMPLOYEE/COMM"/>
+                    <output path="COMM"/>
+                </move>
+            </foreach>
+            <expression>
+                <input path="." var="ResultSet"/>
+                <output path="DBResp/RowsRetrieved"/>
+                <code lang="xpath">fn:count($ResultSet)</code>
+            </expression>
+            <assign value="0">
+                <output path="DBResp/UserReturnCode"/>
+            </assign>
+        </select>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="EmployeeService" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="EmployeeServiceHttpBinding" type="wsdl" bindingName="{http://EmployeeService}EmployeeServiceHttpBinding" soapVersion="1_1" anonymous="optional" definition="http://192.168.126.157:7800/EmployeeService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://192.168.126.157:7800/EmployeeService?wsdl"><con:part><con:url>http://192.168.126.157:7800/EmployeeService?wsdl</con:url><con:content><![CDATA[<!--File EmployeeService.wsdl, shared library EmployeeService_interface_and_maps-->
+<wsdl:definitions name="EmployeeService" targetNamespace="http://EmployeeService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://hrdb/iibadmin" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://EmployeeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="EmployeeServiceHttpBinding" originalBindingStyle="document"/>
+        <generatedXSD location="EmployeeService_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://EmployeeService" xmlns:bons2="http://hrdb/iibadmin">
+      <xsd:import namespace="http://hrdb/iibadmin" schemaLocation="http://192.168.126.157:7800/EmployeeService?xsd=xsd0"/>
+      <xsd:import namespace="http://hrdb/iibadmin" schemaLocation="http://192.168.126.157:7800/EmployeeService?xsd=xsd0"/>
+      <xsd:import namespace="http://hrdb/iibadmin" schemaLocation="http://192.168.126.157:7800/EmployeeService?xsd=xsd0"/>
+      <xsd:import namespace="http://hrdb/iibadmin" schemaLocation="http://192.168.126.157:7800/EmployeeService?xsd=xsd0"/>
+      <xsd:import namespace="http://hrdb/iibadmin" schemaLocation="http://192.168.126.157:7800/EmployeeService?xsd=xsd0"/>
+      <xsd:import namespace="http://hrdb/iibadmin" schemaLocation="http://192.168.126.157:7800/EmployeeService?xsd=xsd0"/>
+      <xsd:include schemaLocation="http://192.168.126.157:7800/EmployeeService?xsd=xsd1"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getEmployeeRequestMsg">
+    <wsdl:part element="tns:getEmployee" name="getEmployeeParameters"/>
+  </wsdl:message>
+  <wsdl:message name="getEmployeeResponseMsg">
+    <wsdl:part element="tns:getEmployeeResponse" name="getEmployeeResult"/>
+  </wsdl:message>
+  <wsdl:message name="updEmployeeRequestMsg">
+    <wsdl:part element="tns:updEmployee" name="updEmployeeParameters"/>
+  </wsdl:message>
+  <wsdl:message name="updEmployeeResponseMsg">
+    <wsdl:part element="tns:updEmployeeResponse" name="updEmployeeResult"/>
+  </wsdl:message>
+  <wsdl:message name="dltEmployeeRequestMsg">
+    <wsdl:part element="tns:dltEmployee" name="dltEmployeeParameters"/>
+  </wsdl:message>
+  <wsdl:message name="dltEmployeeResponseMsg">
+    <wsdl:part element="tns:dltEmployeeResponse" name="dltEmployeeResult"/>
+  </wsdl:message>
+  <wsdl:message name="addEmployeeRequestMsg">
+    <wsdl:part element="tns:addEmployee" name="addEmployeeParameters"/>
+  </wsdl:message>
+  <wsdl:message name="addEmployeeResponseMsg">
+    <wsdl:part element="tns:addEmployeeResponse" name="addEmployeeResult"/>
+  </wsdl:message>
+  <wsdl:portType name="EmployeeService">
+    <wsdl:operation name="getEmployee">
+      <wsdl:input message="tns:getEmployeeRequestMsg" name="getEmployeeRequest"/>
+      <wsdl:output message="tns:getEmployeeResponseMsg" name="getEmployeeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="updEmployee">
+      <wsdl:input message="tns:updEmployeeRequestMsg" name="updEmployeeRequest"/>
+      <wsdl:output message="tns:updEmployeeResponseMsg" name="updEmployeeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="dltEmployee">
+      <wsdl:input message="tns:dltEmployeeRequestMsg" name="dltEmployeeRequest"/>
+      <wsdl:output message="tns:dltEmployeeResponseMsg" name="dltEmployeeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="addEmployee">
+      <wsdl:input message="tns:addEmployeeRequestMsg" name="addEmployeeRequest"/>
+      <wsdl:output message="tns:addEmployeeResponseMsg" name="addEmployeeResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmployeeServiceHttpBinding" type="tns:EmployeeService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getEmployee">
+      <soap:operation soapAction="http://EmployeeService/getEmployee"/>
+      <wsdl:input name="getEmployeeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEmployeeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updEmployee">
+      <soap:operation soapAction="http://EmployeeService/updEmployee"/>
+      <wsdl:input name="updEmployeeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updEmployeeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dltEmployee">
+      <soap:operation soapAction="http://EmployeeService/dltEmployee"/>
+      <wsdl:input name="dltEmployeeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="dltEmployeeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addEmployee">
+      <soap:operation soapAction="http://EmployeeService/addEmployee"/>
+      <wsdl:input name="addEmployeeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addEmployeeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmployeeServiceHttpService">
+    <wsdl:port binding="tns:EmployeeServiceHttpBinding" name="EmployeeServiceHttpPort">
+      <soap:address location="http://192.168.126.157:7800/EmployeeService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://192.168.126.157:7800/EmployeeService?xsd=xsd0</con:url><con:content><![CDATA[<!--File hrdb\iibadmin\HRDB.xsd, shared library EmployeeService_interface_and_maps-->
+<xsd:schema targetNamespace="http://hrdb/iibadmin" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hrdbiibadmin="http://hrdb/iibadmin" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+  <xsd:import schemaLocation="http://192.168.126.157:7800/EmployeeService?xsd=xsd2"/>
+  <xsd:complexType name="DEPARTMENTType">
+    <xsd:sequence>
+      <xsd:element name="DEPTNO">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="DEPTNAME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="36"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MGRNO" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="6"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="ADMRDEPT">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="LOCATION" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="16"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element ibmSchExtn:docRoot="true" name="DEPARTMENT" type="hrdbiibadmin:DEPARTMENTType"/>
+  <xsd:complexType name="EMPLOYEEType">
+    <xsd:sequence>
+      <xsd:element name="EMPNO">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="6"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="FIRSTNME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="12"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MIDINIT" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="LASTNAME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="15"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="WORKDEPT" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="PHONENO" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="4"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="HIREDATE" nillable="true" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="JOB" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="EDLEVEL" type="xsd:short"/>
+      <xsd:element minOccurs="0" name="SEX" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="BIRTHDATE" nillable="true" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="SALARY" nillable="true" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="BONUS" nillable="true" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="COMM" nillable="true" type="xsd:decimal"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element ibmSchExtn:docRoot="true" name="EMPLOYEE" type="hrdbiibadmin:EMPLOYEEType"/>
+  <xsd:complexType name="EmployeeResponseType">
+    <xsd:sequence>
+      <xsd:element ref="DBResp"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" ref="hrdbiibadmin:EMPLOYEE"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="EmployeeResponse" type="hrdbiibadmin:EmployeeResponseType"></xsd:element>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://192.168.126.157:7800/EmployeeService?xsd=xsd2</con:url><con:content><![CDATA[<!--File DBResp.xsd, shared library EmployeeService_interface_and_maps-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="DBRespType">
+    <xsd:sequence>
+      <xsd:element name="UserReturnCode" nillable="true" type="xsd:int"/>
+      <xsd:element name="RowsRetrieved" nillable="true" type="xsd:int"/>
+      <xsd:element name="RowsAdded" nillable="true" type="xsd:int"/>
+      <xsd:element name="RowsUpdated" nillable="true" type="xsd:int"/>
+      <xsd:element name="RowsDeleted" nillable="true" type="xsd:int"/>
+      <xsd:element name="SQLCode_ErrorCode" nillable="true" type="xsd:int"/>
+      <xsd:element name="SQLState_SQLState" nillable="true" type="xsd:string"/>
+      <xsd:element name="SQL_Error_Message" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="DBResp" type="DBRespType"/>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://192.168.126.157:7800/EmployeeService?xsd=xsd1</con:url><con:content><![CDATA[<!--File EmployeeService_InlineSchema1.xsd, shared library EmployeeService_interface_and_maps-->
+<xsd:schema targetNamespace="http://EmployeeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:Q1="http://hrdb/iibadmin" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:tns="http://EmployeeService">
+  <xsd:import namespace="http://hrdb/iibadmin" schemaLocation="http://192.168.126.157:7800/EmployeeService?xsd=xsd0"/>
+  <xsd:import schemaLocation="http://192.168.126.157:7800/EmployeeService?xsd=xsd3"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="getEmployee">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="employeeNumber"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="getEmployeeResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Q1:EmployeeResponse"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="updEmployee">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Q1:EMPLOYEE"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="updEmployeeResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Q1:EmployeeResponse"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="dltEmployee">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="employeeNumber"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="dltEmployeeResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Q1:EmployeeResponse"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="addEmployee">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Q1:EMPLOYEE"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="addEmployeeResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Q1:EmployeeResponse"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://192.168.126.157:7800/EmployeeService?xsd=xsd3</con:url><con:content><![CDATA[<!--File employeeNumber.xsd, shared library EmployeeService_interface_and_maps-->
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="employeeNumberType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="employeeNumber" type="employeeNumberType"/>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://192.168.126.157:7800/EmployeeService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://EmployeeService/addEmployee" name="addEmployee" bindingOperationName="addEmployee" type="Request-Response" outputName="addEmployeeResponse" inputName="addEmployeeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService" xmlns:iib="http://hrdb/iibadmin">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:addEmployee>
+         <iib:EMPLOYEE>
+            <EMPNO>?</EMPNO>
+            <FIRSTNME>?</FIRSTNME>
+            <!--Optional:-->
+            <MIDINIT>?</MIDINIT>
+            <LASTNAME>?</LASTNAME>
+            <!--Optional:-->
+            <WORKDEPT>?</WORKDEPT>
+            <!--Optional:-->
+            <PHONENO>?</PHONENO>
+            <!--Optional:-->
+            <HIREDATE>?</HIREDATE>
+            <!--Optional:-->
+            <JOB>?</JOB>
+            <EDLEVEL>?</EDLEVEL>
+            <!--Optional:-->
+            <SEX>?</SEX>
+            <!--Optional:-->
+            <BIRTHDATE>?</BIRTHDATE>
+            <!--Optional:-->
+            <SALARY>?</SALARY>
+            <!--Optional:-->
+            <BONUS>?</BONUS>
+            <!--Optional:-->
+            <COMM>?</COMM>
+         </iib:EMPLOYEE>
+      </emp:addEmployee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://EmployeeService/addEmployee"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://EmployeeService/dltEmployee" name="dltEmployee" bindingOperationName="dltEmployee" type="Request-Response" outputName="dltEmployeeResponse" inputName="dltEmployeeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="000051"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:dltEmployee>
+         <employeeNumber>000051</employeeNumber>
+      </emp:dltEmployee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://EmployeeService/dltEmployee"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://EmployeeService/getEmployee" name="getEmployee" bindingOperationName="getEmployee" type="Request-Response" outputName="getEmployeeResponse" inputName="getEmployeeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="000010"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:getEmployee>
+         <employeeNumber>000010</employeeNumber>
+      </emp:getEmployee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://EmployeeService/getEmployee"/><con:wsrmConfig version="1.2"/></con:call><con:call name="002"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:getEmployee>
+         <employeeNumber>002</employeeNumber>
+      </emp:getEmployee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://EmployeeService/getEmployee"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://EmployeeService/updEmployee" name="updEmployee" bindingOperationName="updEmployee" type="Request-Response" outputName="updEmployeeResponse" inputName="updEmployeeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="000050"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService" xmlns:iib="http://hrdb/iibadmin">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:updEmployee>
+         <iib:EMPLOYEE>
+            <EMPNO>000050</EMPNO>
+            <FIRSTNME>Rowan</FIRSTNME>
+            <!--Optional:-->
+            <MIDINIT>P</MIDINIT>
+            <LASTNAME>Atkinson</LASTNAME>
+            <!--Optional:-->
+            <WORKDEPT>BBC</WORKDEPT>
+            <!--Optional:-->
+            <PHONENO>5678</PHONENO>
+            <!--Optional:-->
+            <HIREDATE>1978-04-03</HIREDATE>
+            <!--Optional:-->
+            <JOB>A</JOB>
+            <EDLEVEL>8</EDLEVEL>
+            <!--Optional:-->
+            <SEX>M</SEX>
+            <!--Optional:-->
+            <BIRTHDATE>1956-04-08</BIRTHDATE>
+            <!--Optional:-->
+            <SALARY>88888</SALARY>
+            <!--Optional:-->
+            <BONUS>7777</BONUS>
+            <!--Optional:-->
+            <COMM>555</COMM>
+         </iib:EMPLOYEE>
+      </emp:updEmployee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://EmployeeService/updEmployee"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

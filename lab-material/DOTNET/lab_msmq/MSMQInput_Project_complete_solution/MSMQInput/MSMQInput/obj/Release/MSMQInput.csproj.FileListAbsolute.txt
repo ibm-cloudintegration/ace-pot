@@ -1,0 +1,8 @@
+C:\student10\DOTNET\lab_msmq\dll\MSMQInput.dll
+C:\student10\DOTNET\lab_msmq\dll\MSMQInput.pdb
+C:\student10\DOTNET\lab_msmq\MSMQInput_Project\MSMQInput\MSMQInput\obj\Release\MSMQInput.csprojResolveAssemblyReference.cache
+C:\student10\DOTNET\lab_msmq\MSMQInput_Project\MSMQInput\MSMQInput\obj\Release\MSMQInput.dll
+C:\student10\DOTNET\lab_msmq\MSMQInput_Project\MSMQInput\MSMQInput\obj\Release\MSMQInput.pdb
+C:\student10\DOTNET\lab_msmq\MSMQInput_Project_complete_solution\MSMQInput\MSMQInput\obj\Release\MSMQInput.csprojResolveAssemblyReference.cache
+C:\student10\DOTNET\lab_msmq\MSMQInput_Project_complete_solution\MSMQInput\MSMQInput\obj\Release\MSMQInput.dll
+C:\student10\DOTNET\lab_msmq\MSMQInput_Project_complete_solution\MSMQInput\MSMQInput\obj\Release\MSMQInput.pdb

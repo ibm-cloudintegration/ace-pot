@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><tns0:Envelope xmlns:tns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns1="http://EmployeeService" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tns0:Header/>
+  <tns0:Body>
+    <tns1:getEmployee>
+      <employeeNumber>000012</employeeNumber>
+    </tns1:getEmployee>
+  </tns0:Body>
+</tns0:Envelope>

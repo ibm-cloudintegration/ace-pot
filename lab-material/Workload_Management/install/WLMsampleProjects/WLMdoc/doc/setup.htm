@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- 
+
+(C) COPYRIGHT International Business Machines Corp., 2010, 2011
+
+All Rights Reserved * Licensed Materials - Property of IBM
+
+-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <script src="../../com.ibm.etools.msgbroker.samplesgallery/scripts/samples.js" type="text/javascript" xml:space="preserve"> </script>
+<script src="../../org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<link href="../../com.ibm.etools.mft.doc/bip4.css" rel="stylesheet" type="text/css" />
+<link href="../../com.ibm.etools.msgbroker.samplesgallery/css/gallery_common.css" rel="stylesheet" type="text/css" />
+<link href="../../com.ibm.etools.msgbroker.samplesgallery/css/gallery_messagebroker.css" rel="stylesheet" type="text/css" />
+
+  <title>Setting up the Workload Management sample</title>
+</head>
+<body class="sampcont">
+<h1>Setting up the Workload Management sample</h1>
+<p>Ensure that an Integration node has been created and started. Then ensure that an execution group has been started on the Integration node.</p>
+
+<p>The following sections describe the configuration setup that is required to enable the FileInput and FileOutput nodes to function as intended in this sample.</p>
+<ul>
+
+  <li><a href="#setenvvar">Set the <var>MQSI_FILENODES_ROOT_DIRECTORY</var> environment variable</a></li>
+  <li><a href="#createdir">Create directory structure</a></li>
+</ul>
+
+<h2><a name="setenvvar">Set the MQSI_FILENODES_ROOT_DIRECTORY environment variable</a></h2>
+<p>Although the message flows have preset values in their input and output directories properties (fileinput and fileoutput respectively), they do not give an absolute file path. Therefore you must specify this parent directory by setting the <var>MQSI_FILENODES_ROOT_DIRECTORY</var> environment variable in the broker's environment. This directory must exist and be writeable by the broker, as it will also dictate where the FileInput and FileOutput nodes create archive and backout directories they need to function.</p>
+<p>Follow the instructions in <a href="../../com.ibm.etools.mft.doc/an26190_.htm">Setting up a command environment</a> to create a command file which will be added to the Integration node's environment:</p>
+
+<ul>
+	<li>On Windows:
+<pre>set MQSI_FILENODES_ROOT_DIRECTORY=C:\WLMSample</pre>
+	</li>
+	<li>On Linux:
+<pre>export MQSI_FILENODES_ROOT_DIRECTORY=/tmp/WLMSample</pre>
+    </li>
+</ul>
+
+<p>Ensure that you rerun <tt>mqsiprofile</tt>, and restart your Integration node so that it picks up your new environment settings.</p>
+
+<h2><a name="createdir">Create directory structure</a></h2>
+<p>It is necessary to create the subdirectories which the FileInput node will search for the sample input file, and also the subdirectory into which the FileOutput node will write records returned by the back-end application. As stated above, these subdirectories are fileinput and fileoutput respectively. Assuming you chose to create a parent directory of WLMSample, create the following directory structures.</p>
+
+<ul>
+	<li>On Windows:
+		<ol>
+  			<li>    		<span class="filepath">C:\WLMSample\fileinput</span></li>
+  			<li>    		<span class="filepath">C:\WLMSample\fileoutput</span></li>
+		</ol>
+	</li>
+	<li>On Linux:
+		<ol>
+  			<li>    		<span class="filepath">/tmp/WLMSample/fileinput</span></li>
+  			<li>    		<span class="filepath">/tmp/WLMSample/fileoutput</span></li>
+
+		</ol>
+	</li>
+</ul>
+
+<p></p>
+<p class="samplehome"><a href="overview.htm">Back to sample home</a></p>
+<p></p>
+</body>
+</html>

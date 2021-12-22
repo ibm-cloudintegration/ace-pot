@@ -1,0 +1,5 @@
+	Declare inputEmpno char;
+	set inputEmpno = InputRoot.JSON.Data.employeeNumber;
+	    set OutputLocalEnvironment = InputLocalEnvironment;
+	    SET OutputLocalEnvironment.Destination.HTTP.RequestLine.RequestURI = '/HR_Services/resources/employees/complete?employeeNumber='||inputEmpno;
+		  

@@ -1,0 +1,9 @@
+
+
+CREATE COMPUTE MODULE Test_propagate_loop_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		set OutputRoot = InputRoot;
+		RETURN TRUE;
+	END;
+END MODULE;

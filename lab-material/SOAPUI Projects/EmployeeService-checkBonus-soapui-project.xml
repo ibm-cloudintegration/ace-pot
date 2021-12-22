@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="EmployeeService_checkBonus" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="EmployeeServiceHttpBinding" type="wsdl" bindingName="{http://EmployeeService}EmployeeServiceHttpBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/student10/BusinessRules/service_interface/EmployeeServiceInterface/EmployeeService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\student10\BusinessRules\service_interface\EmployeeServiceInterface\EmployeeService.wsdl"><con:part><con:url>file:\C:\student10\BusinessRules\service_interface\EmployeeServiceInterface\EmployeeService.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="EmployeeService" targetNamespace="http://EmployeeService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://sample/iibadmin" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://EmployeeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="EmployeeServiceHttpBinding" originalBindingStyle="document"/>
+        <generatedXSD location="EmployeeService_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://EmployeeService">
+      <xsd:import namespace="http://sample/iibadmin" schemaLocation="sample/iibadmin/SAMPLE_EMPLOYEE.xsd"/>
+      <xsd:import namespace="http://sample/iibadmin" schemaLocation="sample/iibadmin/SAMPLE_EMPLOYEE.xsd"/>
+      <xsd:import namespace="http://sample/iibadmin" schemaLocation="sample/iibadmin/SAMPLE_EMPLOYEE.xsd"/>
+      <xsd:include schemaLocation="EmployeeService_InlineSchema1.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getEmployeeRequestMsg">
+    <wsdl:part element="tns:getEmployee" name="getEmployeeParameters"/>
+  </wsdl:message>
+  <wsdl:message name="getEmployeeResponseMsg">
+    <wsdl:part element="tns:getEmployeeResponse" name="getEmployeeResult"/>
+  </wsdl:message>
+  <wsdl:message name="checkBonusRequestMsg">
+    <wsdl:part element="tns:checkBonus" name="checkBonusParameters"/>
+  </wsdl:message>
+  <wsdl:message name="checkBonusResponseMsg">
+    <wsdl:part element="tns:checkBonusResponse" name="checkBonusResult"/>
+  </wsdl:message>
+  <wsdl:portType name="EmployeeService">
+    <wsdl:operation name="getEmployee">
+      <wsdl:input message="tns:getEmployeeRequestMsg" name="getEmployeeRequest"/>
+      <wsdl:output message="tns:getEmployeeResponseMsg" name="getEmployeeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="checkBonus">
+      <wsdl:input message="tns:checkBonusRequestMsg" name="checkBonusRequest"/>
+      <wsdl:output message="tns:checkBonusResponseMsg" name="checkBonusResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmployeeServiceHttpBinding" type="tns:EmployeeService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getEmployee">
+      <soap:operation soapAction="http://EmployeeService/getEmployee"/>
+      <wsdl:input name="getEmployeeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEmployeeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkBonus">
+      <soap:operation soapAction="http://EmployeeService/checkBonus"/>
+      <wsdl:input name="checkBonusRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="checkBonusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmployeeServiceHttpService">
+    <wsdl:port binding="tns:EmployeeServiceHttpBinding" name="EmployeeServiceHttpPort">
+      <soap:address location="http://localhost:7800/EmployeeService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\student10\BusinessRules\service_interface\EmployeeServiceInterface\sample\iibadmin\SAMPLE_EMPLOYEE.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://sample/iibadmin" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:sampleiibadmin="http://sample/iibadmin">
+  <!--Message definition generated from C:\workspaces\578\SAMPLE\SAMPLE.dbm-->
+  <!--Complex type for SAMPLE.IIBADMIN.EMPLOYEE-->
+  <xsd:import schemaLocation="../../DBResp.xsd"/>
+  <xsd:complexType name="EMPLOYEEType">
+    <xsd:sequence>
+      <xsd:element name="EMPNO">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="6"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="FIRSTNME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="12"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MIDINIT" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="LASTNAME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="15"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="WORKDEPT" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="PHONENO" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="4"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="HIREDATE" nillable="true" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="JOB" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="EDLEVEL" type="xsd:short"/>
+      <xsd:element minOccurs="0" name="SEX" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="BIRTHDATE" nillable="true" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="SALARY" nillable="true" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="BONUS" nillable="true" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="COMM" nillable="true" type="xsd:decimal"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--Global element for SAMPLE.IIBADMIN.EMPLOYEE-->
+  <xsd:element ibmSchExtn:docRoot="true" name="EMPLOYEE" type="sampleiibadmin:EMPLOYEEType"/>
+  <xsd:complexType name="EmployeeResponseType">
+    <xsd:sequence>
+      <xsd:element ref="DBResp"/>
+      <xsd:element ref="sampleiibadmin:EMPLOYEE"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\student10\BusinessRules\service_interface\EmployeeServiceInterface\DBResp.xsd</con:url><con:content><![CDATA[<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="DBRespType">
+    <xsd:sequence>
+      <xsd:element name="UserReturnCode" type="xsd:int"/>
+      <xsd:element name="RowsRetrieved" type="xsd:int"/>
+      <xsd:element name="RowsAdded" type="xsd:int"/>
+      <xsd:element name="RowsUpdated" type="xsd:int"/>
+      <xsd:element name="RowsDeleted" type="xsd:int"/>
+      <xsd:element name="SQLCode_ErrorCode" type="xsd:int"/>
+      <xsd:element name="SQLState_SQLState" type="xsd:string"/>
+      <xsd:element name="SQL_Error_Message" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="DBResp" type="DBRespType"/>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\student10\BusinessRules\service_interface\EmployeeServiceInterface\EmployeeService_InlineSchema1.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://EmployeeService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:Q1="http://sample/iibadmin" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:tns="http://EmployeeService">
+  <xsd:import namespace="http://sample/iibadmin" schemaLocation="sample/iibadmin/SAMPLE_EMPLOYEE.xsd"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="getEmployee">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Q1:EMPLOYEE"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="getEmployeeResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="empOut" nillable="true" type="Q1:EmployeeResponseType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="checkBonus">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Q1:EMPLOYEE"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="checkBonusResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Q1:EMPLOYEE"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://EmployeeService/checkBonus" name="checkBonus" bindingOperationName="checkBonus" type="Request-Response" outputName="checkBonusResponse" inputName="checkBonusRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Salary=2750,Bonus=100"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService" xmlns:iib="http://sample/iibadmin">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:checkBonus>
+         <iib:EMPLOYEE>
+            <EMPNO>000010</EMPNO>
+               <FIRSTNME>CHRISTINE</FIRSTNME>
+               <MIDINIT>I</MIDINIT>
+               <LASTNAME>HAAS</LASTNAME>
+               <WORKDEPT>A00</WORKDEPT>
+               <PHONENO>3978</PHONENO>
+               <HIREDATE>1995-01-01</HIREDATE>
+               <JOB>PRES</JOB>
+               <EDLEVEL>18</EDLEVEL>
+               <SEX>F</SEX>
+               <BIRTHDATE>1963-08-24</BIRTHDATE>
+               <SALARY>2750</SALARY>
+               <BONUS>100</BONUS>
+               <COMM>4220</COMM>
+         </iib:EMPLOYEE>
+      </emp:checkBonus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://EmployeeService/checkBonus"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Salary=32000,Bonus=100"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService" xmlns:iib="http://sample/iibadmin">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:checkBonus>
+         <iib:EMPLOYEE>
+            <EMPNO>000010</EMPNO>
+               <FIRSTNME>CHRISTINE</FIRSTNME>
+               <MIDINIT>I</MIDINIT>
+               <LASTNAME>HAAS</LASTNAME>
+               <WORKDEPT>A00</WORKDEPT>
+               <PHONENO>3978</PHONENO>
+               <HIREDATE>1995-01-01</HIREDATE>
+               <JOB>PRES</JOB>
+               <EDLEVEL>18</EDLEVEL>
+               <SEX>F</SEX>
+               <BIRTHDATE>1963-08-24</BIRTHDATE>
+               <SALARY>32000</SALARY>
+               <BONUS>100</BONUS>
+               <COMM>4220</COMM>
+         </iib:EMPLOYEE>
+      </emp:checkBonus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://EmployeeService/checkBonus"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Salary=32000,Bonus=250"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService" xmlns:iib="http://sample/iibadmin">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:checkBonus>
+         <iib:EMPLOYEE>
+          <EMPNO>000010</EMPNO>
+               <FIRSTNME>CHRISTINE</FIRSTNME>
+               <MIDINIT>I</MIDINIT>
+               <LASTNAME>HAAS</LASTNAME>
+               <WORKDEPT>A00</WORKDEPT>
+               <PHONENO>3978</PHONENO>
+               <HIREDATE>1995-01-01</HIREDATE>
+               <JOB>PRES</JOB>
+               <EDLEVEL>18</EDLEVEL>
+               <SEX>F</SEX>
+               <BIRTHDATE>1963-08-24</BIRTHDATE>
+               <SALARY>32000</SALARY>
+               <BONUS>250</BONUS>
+               <COMM>4220</COMM>
+         </iib:EMPLOYEE>
+      </emp:checkBonus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://EmployeeService/checkBonus"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Salary=1800,Bonus=350"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService" xmlns:iib="http://sample/iibadmin">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:checkBonus>
+         <iib:EMPLOYEE>
+      <EMPNO>000010</EMPNO>
+               <FIRSTNME>CHRISTINE</FIRSTNME>
+               <MIDINIT>I</MIDINIT>
+               <LASTNAME>HAAS</LASTNAME>
+               <WORKDEPT>A00</WORKDEPT>
+               <PHONENO>3978</PHONENO>
+               <HIREDATE>1995-01-01</HIREDATE>
+               <JOB>PRES</JOB>
+               <EDLEVEL>18</EDLEVEL>
+               <SEX>F</SEX>
+               <BIRTHDATE>1963-08-24</BIRTHDATE>
+               <SALARY>1800</SALARY>
+               <BONUS>350</BONUS>
+               <COMM>4220</COMM>
+         </iib:EMPLOYEE>
+      </emp:checkBonus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://EmployeeService/checkBonus"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://EmployeeService/getEmployee" name="getEmployee" bindingOperationName="getEmployee" type="Request-Response" outputName="getEmployeeResponse" inputName="getEmployeeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="000010"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/EmployeeService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:emp="http://EmployeeService" xmlns:iib="http://sample/iibadmin">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <emp:getEmployee>
+         <iib:EMPLOYEE>
+            <EMPNO>000010</EMPNO>
+            <FIRSTNME>?</FIRSTNME>
+            <!--Optional:-->
+            <MIDINIT>?</MIDINIT>
+            <LASTNAME>?</LASTNAME>
+            <!--Optional:-->
+            <WORKDEPT>?</WORKDEPT>
+            <!--Optional:-->
+            <PHONENO>?</PHONENO>
+            <!--Optional:-->
+            <HIREDATE>?</HIREDATE>
+            <!--Optional:-->
+            <JOB>?</JOB>
+            <EDLEVEL>?</EDLEVEL>
+            <!--Optional:-->
+            <SEX>?</SEX>
+            <!--Optional:-->
+            <BIRTHDATE>?</BIRTHDATE>
+            <!--Optional:-->
+            <SALARY>?</SALARY>
+            <!--Optional:-->
+            <BONUS>?</BONUS>
+            <!--Optional:-->
+            <COMM>?</COMM>
+         </iib:EMPLOYEE>
+      </emp:getEmployee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://EmployeeService/getEmployee"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

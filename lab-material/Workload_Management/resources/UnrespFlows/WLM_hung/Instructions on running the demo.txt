@@ -1,0 +1,9 @@
+This demo has to be run using the default configuration broker and queue manager to work correctly.
+1, Import the project provided in the bad_flow.zip file.
+2, Create the Queues IN1, IN2, OUT1 and OUT2.
+3, Deploy the flow int the project to an execution group.
+4, Put the test message Hang_propagate_flipurate.txt to the input queue and it will hang the message flow.
+5, Use the new -f option on the mqsistopmsgflow to stop the flow.
+	mqsistopmsgflow IB9NODE -e default -k WLM_hung_flow -f restartExecutionGroup
+6, Also configure the processingTimeout options to cause the flow to get restarted when stuck. 
+7, It is also worth subscribing to the topic: $SYS/Broker/<brokerName>/WorkLoadManagement/ProcessingTimeout/ to recieve the alerts that the flow is stuck.

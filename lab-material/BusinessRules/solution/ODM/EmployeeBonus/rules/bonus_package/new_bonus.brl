@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>new_bonus</name>
+  <uuid>189cbc65-9a0b-431c-a306-152ab4f362c0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if the SALARY of 'the employee' is less than 20000 and the BONUS of 'the employee' is less than 200 then set the BONUS of 'the employee' to 500; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

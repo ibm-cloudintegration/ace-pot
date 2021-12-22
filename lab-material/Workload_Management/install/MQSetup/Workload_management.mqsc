@@ -1,0 +1,51 @@
+define ql(WORKLOAD_IN) replace
+define ql(WORKLOAD_OUT) replace
+def ql(wlm.in1) replace
+def ql(wlm.in2) replace
+def ql(wlm.out1) replace
+def ql(wlm.out2) replace
+def ql(WLM_HUNGFLOW_IN1) replace
+def ql(WLM_HUNGFLOW_OUT1) replace
+def ql(WLM_HUNGFLOW_AUDIT1) replace
+def ql(WLM_HUNGFLOW_GET1) replace
+def ql(in1) replace
+def ql(in2) replace
+def ql(out1) replace
+def ql(audit1) replace
+def ql(get1) replace
+def ql(wlm.notification.above) replace
+def ql(wlm.notification.below) replace
+def ql(WLM.TO) replace
+def ql(WLM.FIN) replace 
+def ql(WLM.AT) replace
+def ql(WLM.BT) replace
+def sub(wlmAT) +
+       TOPICSTR ('$SYS/Broker/+/WorkloadManagement/AboveThreshold/+/#') +
+       DESTCLAS (PROVIDED) +
+	   DESTQMGR (IB10QMGR) +
+       DEST ('WLM.AT') +
+       EXPIRY (UNLIMITED) +
+       PUBPRTY (ASPUB)
+def sub(wlmBT) +
+       TOPICSTR ('$SYS/Broker/+/WorkloadManagement/BelowThreshold/+/#') +
+       DESTCLAS (PROVIDED) +
+	   DESTQMGR (IB10QMGR) +
+       DEST ('WLM.BT') +
+       EXPIRY (UNLIMITED) +
+       PUBPRTY (ASPUB)
+def sub(wlmTO) +
+       TOPICSTR ('$SYS/Broker/IB10NODE/WorkloadManagement/ProcessingTimeout/#') +
+       DESTCLAS (PROVIDED) +
+	   DESTQMGR (IB10QMGR) +
+       DEST ('WLM.TO') +
+       EXPIRY (UNLIMITED) +
+       PUBPRTY (ASPUB)
+def sub(wlmFIN) +
+       TOPICSTR ('$SYS/Broker/IB10NODE/WorkloadManagement/ProcessingFinished/#') +
+       DESTCLAS (PROVIDED) +
+	   DESTQMGR (IB10QMGR) +
+       DEST ('WLM.FIN') +
+       EXPIRY (UNLIMITED) +
+       PUBPRTY (ASPUB)
+
+

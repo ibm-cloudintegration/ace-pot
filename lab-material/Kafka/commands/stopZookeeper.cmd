@@ -1,0 +1,1 @@
+zookeeper-server-stop.bat c:\student10\kafka\config\zookeeper.properties

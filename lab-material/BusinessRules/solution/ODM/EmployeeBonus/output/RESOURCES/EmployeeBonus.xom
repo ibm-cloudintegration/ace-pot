@@ -1,0 +1,429 @@
+include "ilog/rules/xml/binding/xsd_types.xom";
+
+
+public class DBRespType
+        extends ilog.rules.xml.IlrXmlObject
+        property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+        property "ilog.rules.xml.classInfo" {
+            derivation "EXTENSION",
+            model "sequence",
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+            xmlFieldNumber "8",
+            xmlScope "global",
+            xmlType "DBRespType",
+            xsdLocation "DBResp.xsd"
+        }
+{
+    public int RowsAdded
+                property "ilog.rules.xml.fieldInfo" {
+                    index "2",
+                    xmlKind "ELEMENT",
+                    xmlName "RowsAdded",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}int",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdInt"
+                };
+    public int RowsDeleted
+                property "ilog.rules.xml.fieldInfo" {
+                    index "4",
+                    xmlKind "ELEMENT",
+                    xmlName "RowsDeleted",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}int",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdInt"
+                };
+    public int RowsRetrieved
+                property "ilog.rules.xml.fieldInfo" {
+                    index "1",
+                    xmlKind "ELEMENT",
+                    xmlName "RowsRetrieved",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}int",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdInt"
+                };
+    public int RowsUpdated
+                property "ilog.rules.xml.fieldInfo" {
+                    index "3",
+                    xmlKind "ELEMENT",
+                    xmlName "RowsUpdated",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}int",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdInt"
+                };
+    public int SQLCode_ErrorCode
+                property "ilog.rules.xml.fieldInfo" {
+                    index "5",
+                    xmlKind "ELEMENT",
+                    xmlName "SQLCode_ErrorCode",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}int",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdInt"
+                };
+    public string SQLState_SQLState
+                property "ilog.rules.xml.fieldInfo" {
+                    index "6",
+                    xmlKind "ELEMENT",
+                    xmlName "SQLState_SQLState",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public string SQL_Error_Message
+                property "ilog.rules.xml.fieldInfo" {
+                    index "7",
+                    xmlKind "ELEMENT",
+                    xmlName "SQL_Error_Message",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public int UserReturnCode
+                property "ilog.rules.xml.fieldInfo" {
+                    index "0",
+                    xmlKind "ELEMENT",
+                    xmlName "UserReturnCode",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}int",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdInt"
+                };
+    public DBRespType();
+    public void setUnknownRowsAdded();
+    public void setUnknownRowsDeleted();
+    public void setUnknownRowsRetrieved();
+    public void setUnknownRowsUpdated();
+    public void setUnknownSQLCode_ErrorCode();
+    public void setUnknownUserReturnCode();
+}
+
+class IlogRulesXmlPackage
+        property "ilog.rules.xml.packageInfo" {
+            "1" {
+                xmlName "DBResp",
+                xomType "DBRespType"
+            },
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0"
+        }
+        property visible "false"
+{
+}
+
+package sample.iibadmin;
+
+
+public class EMPLOYEEType
+        extends ilog.rules.xml.IlrXmlObject
+        property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+        property "ilog.rules.xml.classInfo" {
+            derivation "EXTENSION",
+            model "sequence",
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+            xmlFieldNumber "14",
+            xmlScope "global",
+            xmlType "{http://sample/iibadmin}EMPLOYEEType",
+            xsdLocation "SAMPLE_EMPLOYEE.xsd"
+        }
+{
+
+    public class EMPNOType
+            extends ilog.rules.xml.types.xsd.XsdString
+            property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+            property "ilog.rules.xml.simpleTypeInfo" {
+                maxLength "6",
+                version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+                xmlScope "local",
+                xsdLocation "SAMPLE_EMPLOYEE.xsd"
+            }
+    {
+        public static java.lang.String[] getEnumerations();
+        public static int getLength();
+        public static int getMaxLength();
+        public static int getMinLength();
+        public static string getPattern();
+        public static string toXmlString(string instance);
+    }
+
+    public class FIRSTNMEType
+            extends ilog.rules.xml.types.xsd.XsdString
+            property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+            property "ilog.rules.xml.simpleTypeInfo" {
+                maxLength "12",
+                version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+                xmlScope "local",
+                xsdLocation "SAMPLE_EMPLOYEE.xsd"
+            }
+    {
+        public static java.lang.String[] getEnumerations();
+        public static int getLength();
+        public static int getMaxLength();
+        public static int getMinLength();
+        public static string getPattern();
+        public static string toXmlString(string instance);
+    }
+
+    public class JOBType
+            extends ilog.rules.xml.types.xsd.XsdString
+            property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+            property "ilog.rules.xml.simpleTypeInfo" {
+                maxLength "8",
+                version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+                xmlScope "local",
+                xsdLocation "SAMPLE_EMPLOYEE.xsd"
+            }
+    {
+        public static java.lang.String[] getEnumerations();
+        public static int getLength();
+        public static int getMaxLength();
+        public static int getMinLength();
+        public static string getPattern();
+        public static string toXmlString(string instance);
+    }
+
+    public class LASTNAMEType
+            extends ilog.rules.xml.types.xsd.XsdString
+            property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+            property "ilog.rules.xml.simpleTypeInfo" {
+                maxLength "15",
+                version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+                xmlScope "local",
+                xsdLocation "SAMPLE_EMPLOYEE.xsd"
+            }
+    {
+        public static java.lang.String[] getEnumerations();
+        public static int getLength();
+        public static int getMaxLength();
+        public static int getMinLength();
+        public static string getPattern();
+        public static string toXmlString(string instance);
+    }
+
+    public class MIDINITType
+            extends ilog.rules.xml.types.xsd.XsdString
+            property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+            property "ilog.rules.xml.simpleTypeInfo" {
+                maxLength "1",
+                version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+                xmlScope "local",
+                xsdLocation "SAMPLE_EMPLOYEE.xsd"
+            }
+    {
+        public static java.lang.String[] getEnumerations();
+        public static int getLength();
+        public static int getMaxLength();
+        public static int getMinLength();
+        public static string getPattern();
+        public static string toXmlString(string instance);
+    }
+
+    public class PHONENOType
+            extends ilog.rules.xml.types.xsd.XsdString
+            property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+            property "ilog.rules.xml.simpleTypeInfo" {
+                maxLength "4",
+                version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+                xmlScope "local",
+                xsdLocation "SAMPLE_EMPLOYEE.xsd"
+            }
+    {
+        public static java.lang.String[] getEnumerations();
+        public static int getLength();
+        public static int getMaxLength();
+        public static int getMinLength();
+        public static string getPattern();
+        public static string toXmlString(string instance);
+    }
+
+    public class SEXType
+            extends ilog.rules.xml.types.xsd.XsdString
+            property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+            property "ilog.rules.xml.simpleTypeInfo" {
+                maxLength "1",
+                version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+                xmlScope "local",
+                xsdLocation "SAMPLE_EMPLOYEE.xsd"
+            }
+    {
+        public static java.lang.String[] getEnumerations();
+        public static int getLength();
+        public static int getMaxLength();
+        public static int getMinLength();
+        public static string getPattern();
+        public static string toXmlString(string instance);
+    }
+
+    public class WORKDEPTType
+            extends ilog.rules.xml.types.xsd.XsdString
+            property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+            property "ilog.rules.xml.simpleTypeInfo" {
+                maxLength "3",
+                version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+                xmlScope "local",
+                xsdLocation "SAMPLE_EMPLOYEE.xsd"
+            }
+    {
+        public static java.lang.String[] getEnumerations();
+        public static int getLength();
+        public static int getMaxLength();
+        public static int getMinLength();
+        public static string getPattern();
+        public static string toXmlString(string instance);
+    }
+    public ilog.rules.xml.types.IlrDate BIRTHDATE domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "10",
+                    nillable "true",
+                    xmlKind "ELEMENT",
+                    xmlName "BIRTHDATE",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}date",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdDate"
+                };
+    public java.math.BigDecimal BONUS domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "12",
+                    nillable "true",
+                    xmlKind "ELEMENT",
+                    xmlName "BONUS",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}decimal",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdDecimal"
+                };
+    public java.math.BigDecimal COMM domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "13",
+                    nillable "true",
+                    xmlKind "ELEMENT",
+                    xmlName "COMM",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}decimal",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdDecimal"
+                };
+    public short EDLEVEL
+                property "ilog.rules.xml.fieldInfo" {
+                    index "8",
+                    xmlKind "ELEMENT",
+                    xmlName "EDLEVEL",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}short",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdShort"
+                };
+    public string EMPNO
+                property "ilog.rules.xml.fieldInfo" {
+                    index "0",
+                    xmlKind "ELEMENT",
+                    xmlName "EMPNO",
+                    xomComponentType "sample.iibadmin.EMPLOYEEType.EMPNOType"
+                };
+    public string FIRSTNME
+                property "ilog.rules.xml.fieldInfo" {
+                    index "1",
+                    xmlKind "ELEMENT",
+                    xmlName "FIRSTNME",
+                    xomComponentType "sample.iibadmin.EMPLOYEEType.FIRSTNMEType"
+                };
+    public ilog.rules.xml.types.IlrDate HIREDATE domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "6",
+                    nillable "true",
+                    xmlKind "ELEMENT",
+                    xmlName "HIREDATE",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}date",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdDate"
+                };
+    public string JOB domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "7",
+                    nillable "true",
+                    xmlKind "ELEMENT",
+                    xmlName "JOB",
+                    xomComponentType "sample.iibadmin.EMPLOYEEType.JOBType"
+                };
+    public string LASTNAME
+                property "ilog.rules.xml.fieldInfo" {
+                    index "3",
+                    xmlKind "ELEMENT",
+                    xmlName "LASTNAME",
+                    xomComponentType "sample.iibadmin.EMPLOYEEType.LASTNAMEType"
+                };
+    public string MIDINIT domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "2",
+                    nillable "true",
+                    xmlKind "ELEMENT",
+                    xmlName "MIDINIT",
+                    xomComponentType "sample.iibadmin.EMPLOYEEType.MIDINITType"
+                };
+    public string PHONENO domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "5",
+                    nillable "true",
+                    xmlKind "ELEMENT",
+                    xmlName "PHONENO",
+                    xomComponentType "sample.iibadmin.EMPLOYEEType.PHONENOType"
+                };
+    public java.math.BigDecimal SALARY domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "11",
+                    nillable "true",
+                    xmlKind "ELEMENT",
+                    xmlName "SALARY",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}decimal",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdDecimal"
+                };
+    public string SEX domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "9",
+                    nillable "true",
+                    xmlKind "ELEMENT",
+                    xmlName "SEX",
+                    xomComponentType "sample.iibadmin.EMPLOYEEType.SEXType"
+                };
+    public string WORKDEPT domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "4",
+                    nillable "true",
+                    xmlKind "ELEMENT",
+                    xmlName "WORKDEPT",
+                    xomComponentType "sample.iibadmin.EMPLOYEEType.WORKDEPTType"
+                };
+    public EMPLOYEEType();
+    public void setUnknownEDLEVEL();
+}
+
+public class EmployeeResponseType
+        extends ilog.rules.xml.IlrXmlObject
+        property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+        property "ilog.rules.xml.classInfo" {
+            derivation "EXTENSION",
+            model "sequence",
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+            xmlFieldNumber "2",
+            xmlScope "global",
+            xmlType "{http://sample/iibadmin}EmployeeResponseType",
+            xsdLocation "SAMPLE_EMPLOYEE.xsd"
+        }
+{
+    public DBRespType DBResp
+                property "ilog.rules.xml.fieldInfo" {
+                    index "0",
+                    reference "true",
+                    xmlKind "ELEMENT",
+                    xmlName "DBResp",
+                    xmlType "DBRespType",
+                    xomComponentType "DBRespType"
+                };
+    public java.util.Vector EMPLOYEEList domain 0,* class sample.iibadmin.EMPLOYEEType
+                property "ilog.rules.xml.fieldInfo" {
+                    index "1",
+                    reference "true",
+                    xmlKind "ELEMENT",
+                    xmlName "{http://sample/iibadmin}EMPLOYEE",
+                    xmlType "{http://sample/iibadmin}EMPLOYEEType",
+                    xomComponentType "sample.iibadmin.EMPLOYEEType"
+                };
+    public EmployeeResponseType();
+}
+
+class IlogRulesXmlPackage
+        property "ilog.rules.xml.packageInfo" {
+            "1" {
+                xmlName "{http://sample/iibadmin}EmployeeResponse",
+                xomType "sample.iibadmin.EmployeeResponseType"
+            },
+            "2" {
+                xmlName "{http://sample/iibadmin}EMPLOYEE",
+                xomType "sample.iibadmin.EMPLOYEEType"
+            },
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0"
+        }
+        property visible "false"
+{
+}
+

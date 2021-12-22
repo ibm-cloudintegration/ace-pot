@@ -1,0 +1,23 @@
+def ql(in1) replace
+def ql(in2) replace
+def ql(out1) replace
+def ql(out1) replace
+def ql(audit1) replace
+def ql(get1) replace
+def ql(WLM.TO) replace
+def ql(WLM.FIN) replace 
+def sub(wlmTO) +
+       TOPICSTR ('$SYS/Broker/IB9NODE/WorkloadManagement/ProcessingTimeout/#') +
+       DESTCLAS (PROVIDED) +
+	   DESTQMGR (IB9QMGR) +
+       DEST ('WLM.TO') +
+       EXPIRY (UNLIMITED) +
+       PUBPRTY (ASPUB)
+def sub(wlmFIN) +
+       TOPICSTR ('$SYS/Broker/IB9NODE/WorkloadManagement/ProcessingFinished/#') +
+       DESTCLAS (PROVIDED) +
+	   DESTQMGR (IB9QMGR) +
+       DEST ('WLM.FIN') +
+       EXPIRY (UNLIMITED) +
+       PUBPRTY (ASPUB)
+

@@ -1,0 +1,3 @@
+define ql(IB10QMGR) replace
+define ql(IN) replace
+define ql(OUT) replace

@@ -1,0 +1,1 @@
+db.EMPLOYEE.find({EMPNO: "000010"})

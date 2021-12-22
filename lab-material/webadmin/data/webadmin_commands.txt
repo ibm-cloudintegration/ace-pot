@@ -1,0 +1,15 @@
+cd C:\student\webadmin\resources\
+
+set_webadmin_users_MQAuth.cmd
+
+mqsiwebuseradmin IB9NODE -c -u admin1 -a passw0rd -r ESBProfile1
+
+mqsiwebuseradmin IB9NODE -c -u admin2 -a passw0rd -r ESBProfile2
+
+mqsiwebuseradmin IB9NODE -l
+
+cd C:\student\Workload_Management\resources\WLMdemo\WLM_not_and_max
+
+cd C:\student\webadmin\run\Run_slow_tcpip_app
+
+

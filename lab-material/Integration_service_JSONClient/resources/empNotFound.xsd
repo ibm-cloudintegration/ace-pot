@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/empNotFound" xmlns:tns="http://www.example.org/empNotFound" elementFormDefault="qualified">
+
+    <complexType name="textmessage_notfound">
+    	<sequence>
+    		<element name="text" type="string"></element>
+    		<element name="empNumber" type="string"></element>
+    		<element name="applicationName" type="string"></element>
+    		<element name="flowName" type="string"></element>
+    		<element name="dateTime" type="dateTime"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="notfoundMessage" type="tns:textmessage_notfound"></element>
+</schema>

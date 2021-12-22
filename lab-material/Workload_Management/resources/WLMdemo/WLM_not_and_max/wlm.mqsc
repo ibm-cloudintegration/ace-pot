@@ -1,0 +1,26 @@
+def ql(wlm.in1) replace
+def ql(wlm.in2) replace
+def ql(wlm.out1) replace
+def ql(wlm.out2) replace
+def ql(WLM.AT) replace
+def ql(WLM.BT) replace
+def ql(wlm.notification.above) replace
+def ql(wlm.notification.below) replace
+def ql(WLM.TO) replace
+def ql(WLM.FIN) replace 
+def ql(WLM.AT) replace
+def ql(WLM.BT) replace
+def sub(wlmAT) +
+       TOPICSTR ('$SYS/Broker/+/WorkloadManagement/AboveThreshold/+/#') +
+       DESTCLAS (PROVIDED) +
+	   DESTQMGR (IB10QMGR) +
+       DEST ('WLM.AT') +
+       EXPIRY (UNLIMITED) +
+       PUBPRTY (ASPUB)
+def sub(wlmBT) +
+       TOPICSTR ('$SYS/Broker/+/WorkloadManagement/BelowThreshold/+/#') +
+       DESTCLAS (PROVIDED) +
+	   DESTQMGR (IB10QMGR) +
+       DEST ('WLM.BT') +
+       EXPIRY (UNLIMITED) +
+       PUBPRTY (ASPUB)

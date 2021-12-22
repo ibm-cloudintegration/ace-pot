@@ -1,0 +1,2 @@
+set PATH="C:\Program Files (x86)\IBM\IntegrationToolkit90\jdk\bin";%PATH%
+java -cp "wlm_demo_app.jar;64bit\swt.jar;org.swtchart_0.8.0.v20120301.jar;org.swtchart.ext_0.8.0.v20120301.jar;%CLASSPATH%" Rate_consumer

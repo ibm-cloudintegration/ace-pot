@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessagePool xmlns="http://wwww.ibm.com/iib/test/1.0.0">
+    <InputMessage timestamp="1494956367589" nodeId="FCMComposite_1_2" name="Salary 18000, Bonus 600" id="1494956367589-1491">
+        <plainText>%3C%3Fxml+version%3D%221.0%22+encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Chrdbiibadmin%3AEMPLOYEE+xmlns%3Ahrdbiibadmin%3D%22http%3A%2F%2Fhrdb%2Fiibadmin%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xsi%3AschemaLocation%3D%22http%3A%2F%2Fhrdb%2Fiibadmin+HRDB.xsd+%22%3E%0D%0A++%3CEMPNO%3E000010%3C%2FEMPNO%3E%0D%0A++%3CFIRSTNME%3EDavid%3C%2FFIRSTNME%3E%0D%0A++%3CMIDINIT%3ED%3C%2FMIDINIT%3E%0D%0A++%3CLASTNAME%3EJohnson%3C%2FLASTNAME%3E%0D%0A++%3CWORKDEPT%3EA00%3C%2FWORKDEPT%3E%0D%0A++%3CPHONENO%3E1234%3C%2FPHONENO%3E%0D%0A++%3CHIREDATE%3E2001-01-01%3C%2FHIREDATE%3E%0D%0A++%3CJOB%3EJOB%3C%2FJOB%3E%0D%0A++%3CEDLEVEL%3E9%3C%2FEDLEVEL%3E%0D%0A++%3CSEX%3EM%3C%2FSEX%3E%0D%0A++%3CBIRTHDATE%3E2001-01-01%3C%2FBIRTHDATE%3E%0D%0A++%3CSALARY%3E18000%3C%2FSALARY%3E%0D%0A++%3CBONUS%3E600%3C%2FBONUS%3E%0D%0A++%3CCOMM%3E1000%3C%2FCOMM%3E%0D%0A%3C%2Fhrdbiibadmin%3AEMPLOYEE%3E%0D%0A</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1495026940211" nodeId="FCMComposite_1_2" name="Salary 18000, Bonus 150" id="1495026940211-225">
+        <plainText>%3C%3Fxml+version%3D%221.0%22+encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Chrdbiibadmin%3AEMPLOYEE+xmlns%3Ahrdbiibadmin%3D%22http%3A%2F%2Fhrdb%2Fiibadmin%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xsi%3AschemaLocation%3D%22http%3A%2F%2Fhrdb%2Fiibadmin+HRDB.xsd+%22%3E%0D%0A++%3CEMPNO%3E000010%3C%2FEMPNO%3E%0D%0A++%3CFIRSTNME%3EDavid%3C%2FFIRSTNME%3E%0D%0A++%3CMIDINIT%3ED%3C%2FMIDINIT%3E%0D%0A++%3CLASTNAME%3EJohnson%3C%2FLASTNAME%3E%0D%0A++%3CWORKDEPT%3EA00%3C%2FWORKDEPT%3E%0D%0A++%3CPHONENO%3E1234%3C%2FPHONENO%3E%0D%0A++%3CHIREDATE%3E2001-01-01%3C%2FHIREDATE%3E%0D%0A++%3CJOB%3EJOB%3C%2FJOB%3E%0D%0A++%3CEDLEVEL%3E9%3C%2FEDLEVEL%3E%0D%0A++%3CSEX%3EM%3C%2FSEX%3E%0D%0A++%3CBIRTHDATE%3E2001-01-01%3C%2FBIRTHDATE%3E%0D%0A++%3CSALARY%3E18000%3C%2FSALARY%3E%0D%0A++%3CBONUS%3E150%3C%2FBONUS%3E%0D%0A++%3CCOMM%3E1000%3C%2FCOMM%3E%0D%0A%3C%2Fhrdbiibadmin%3AEMPLOYEE%3E%0D%0A</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1495026980882" nodeId="FCMComposite_1_2" name="Salary 21000, Bonus 150" id="1495026980882-283">
+        <plainText>%3C%3Fxml+version%3D%221.0%22+encoding%3D%22UTF-8%22%3F%3E%0D%0A%3Chrdbiibadmin%3AEMPLOYEE+xmlns%3Ahrdbiibadmin%3D%22http%3A%2F%2Fhrdb%2Fiibadmin%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xsi%3AschemaLocation%3D%22http%3A%2F%2Fhrdb%2Fiibadmin+HRDB.xsd+%22%3E%0D%0A++%3CEMPNO%3E000010%3C%2FEMPNO%3E%0D%0A++%3CFIRSTNME%3EDavid%3C%2FFIRSTNME%3E%0D%0A++%3CMIDINIT%3ED%3C%2FMIDINIT%3E%0D%0A++%3CLASTNAME%3EJohnson%3C%2FLASTNAME%3E%0D%0A++%3CWORKDEPT%3EA00%3C%2FWORKDEPT%3E%0D%0A++%3CPHONENO%3E1234%3C%2FPHONENO%3E%0D%0A++%3CHIREDATE%3E2001-01-01%3C%2FHIREDATE%3E%0D%0A++%3CJOB%3EJOB%3C%2FJOB%3E%0D%0A++%3CEDLEVEL%3E9%3C%2FEDLEVEL%3E%0D%0A++%3CSEX%3EM%3C%2FSEX%3E%0D%0A++%3CBIRTHDATE%3E2001-01-01%3C%2FBIRTHDATE%3E%0D%0A++%3CSALARY%3E21000%3C%2FSALARY%3E%0D%0A++%3CBONUS%3E150%3C%2FBONUS%3E%0D%0A++%3CCOMM%3E1000%3C%2FCOMM%3E%0D%0A%3C%2Fhrdbiibadmin%3AEMPLOYEE%3E%0D%0A</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1495028081203" nodeId="FCMComposite_1_2" name="Employee 000120 (salary 49250, bonus 600)" id="1495028081203-534">
+        <plainText>%7B+++%22employee_in%22%3A+%22000120%22%7D</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1495028155635" nodeId="FCMComposite_1_2" name="Employee 000130 (salary 73800, bonus 500)" id="1495028155635-600">
+        <plainText>%7B+++%22employee_in%22%3A+%22000130%22%7D</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1495028209722" nodeId="FCMComposite_1_2" name="Employee 000150 (salary 55280, bonus 500)" id="1495028209722-670">
+        <plainText>%7B+++%22employee_in%22%3A+%22000150%22%7D</plainText>
+    </InputMessage>
+    <InputMessage timestamp="1495028251018" nodeId="FCMComposite_1_2" name="Employee 000160 (salary 62250, bonus 400)" id="1495028251018-744">
+        <plainText>%7B+++%22employee_in%22%3A+%22000160%22%7D</plainText>
+    </InputMessage>
+</MessagePool>

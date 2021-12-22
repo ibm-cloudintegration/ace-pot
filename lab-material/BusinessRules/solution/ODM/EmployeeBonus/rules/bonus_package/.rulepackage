@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>bonus_package</name>
+  <uuid>2da00010-850f-465d-8bbe-8c78083df327</uuid>
+</ilog.rules.studio.model.base:RulePackage>

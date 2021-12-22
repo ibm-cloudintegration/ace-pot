@@ -1,0 +1,9 @@
+
+
+CREATE COMPUTE MODULE Test_propagate_loop_Create_audit_message
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		set OutputRoot = InputRoot;
+		RETURN TRUE;
+	END;
+END MODULE;

@@ -1,0 +1,9 @@
+
+
+CREATE COMPUTE MODULE Test_propagate_loop_Flipurate
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	    SET OutputRoot = InputRoot;
+		RETURN sleep(30000);
+	END;
+END MODULE;

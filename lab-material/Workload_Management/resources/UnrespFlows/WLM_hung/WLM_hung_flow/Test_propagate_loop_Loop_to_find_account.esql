@@ -1,0 +1,10 @@
+
+
+CREATE COMPUTE MODULE Test_propagate_loop_Loop_to_find_account
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		set OutputRoot = InputRoot;
+		SET InputLocalEnvironment.Destination.RouterList.DestinationData[1].labelName =InputRoot.XMLNSC.Account.Action;
+		RETURN TRUE;
+	END;
+END MODULE;

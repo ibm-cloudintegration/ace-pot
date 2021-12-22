@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://hrdb/iibadmin" xmlns:hrdbiibadmin="http://hrdb/iibadmin" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+  <!-- Message definition generated from C:\workspaces\1650_ODM\HRDB_project\HRDB.dbm -->
+
+<!-- Complex type for HRDB.IIBADMIN.DEPARTMENT -->
+    <xsd:complexType name="DEPARTMENTType">
+    <xsd:sequence>
+      <xsd:element name="DEPTNO">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="DEPTNAME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="36"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MGRNO" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="6"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="ADMRDEPT">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="LOCATION" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="16"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+<!-- Global element for HRDB.IIBADMIN.DEPARTMENT -->
+    <xsd:element ibmSchExtn:docRoot="true" name="DEPARTMENT" type="hrdbiibadmin:DEPARTMENTType"/>
+
+<!-- Complex type for HRDB.IIBADMIN.EMPLOYEE -->
+    <xsd:complexType name="EMPLOYEEType">
+    <xsd:sequence>
+      <xsd:element name="EMPNO">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="6"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="FIRSTNME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="12"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MIDINIT" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="LASTNAME">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="15"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="WORKDEPT" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="3"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="PHONENO" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="4"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="HIREDATE" nillable="true" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="JOB" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="8"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="EDLEVEL" type="xsd:short"/>
+      <xsd:element minOccurs="0" name="SEX" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="BIRTHDATE" nillable="true" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="SALARY" nillable="true" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="BONUS" nillable="true" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="COMM" nillable="true" type="xsd:decimal"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+<!-- Global element for HRDB.IIBADMIN.EMPLOYEE -->
+    <xsd:element ibmSchExtn:docRoot="true" name="EMPLOYEE" type="hrdbiibadmin:EMPLOYEEType"/>
+
+<!-- Complex type for HRDB.IIBADMIN.EMPLOYEE_SUPPLEMENTARY -->
+    <xsd:complexType name="EMPLOYEE_SUPPLEMENTARYType">
+    <xsd:sequence>
+      <xsd:element name="EMPNO_SUPP">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="6"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="EMAIL" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="256"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MOBILEPHONE" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="TWITTERID" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="32"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="BOXID" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="256"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="IMAGE" nillable="true">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1048576"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+<!-- Global element for HRDB.IIBADMIN.EMPLOYEE_SUPPLEMENTARY -->
+    <xsd:element ibmSchExtn:docRoot="true" name="EMPLOYEE_SUPPLEMENTARY" type="hrdbiibadmin:EMPLOYEE_SUPPLEMENTARYType"/>
+</xsd:schema>

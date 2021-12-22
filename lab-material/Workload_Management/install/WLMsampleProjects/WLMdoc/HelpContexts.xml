@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.contexts"?>
+
+<!-- Add one pair of <context></context> tags for each link into the help system. -->
+
+<!-- The value of the 'id' can be any string as long as it's unique within this file. -->
+<!-- The value of the 'topic label' is the title of the topic that you're linking to. -->
+<!-- The value of the 'href' is the location of the topic that you're linking to. -->
+
+<contexts>
+
+      <context id ="identifier_string">
+            <topic label="Topic title" href="../plugin.id/filename.htm" />
+      </context>
+
+</contexts>

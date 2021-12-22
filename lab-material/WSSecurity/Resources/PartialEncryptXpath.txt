@@ -1,0 +1,8 @@
+/*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/' and local-name()='Envelope']
+/*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/' and local-name()='Body']
+/*[namespace-uri()='http://EmployeeService' and local-name()='getEmployeeResponse']
+/*[namespace-uri()='http://sample/iibadmin' and local-name()='EmployeeResponse']
+/*[namespace-uri()='http://sample/iibadmin' and local-name()='EMPLOYEE']/SALARY
+
+
+/*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/' and local-name()='Envelope']/*[namespace-uri()='http://schemas.xmlsoap.org/soap/envelope/' and local-name()='Body']/*[namespace-uri()='http://EmployeeService' and local-name()='getEmployeeResponse']/getEmployeeResponse/*[namespace-uri()='http://sample/iibadmin' and local-name()='EmployeeResponse']/EmployeeResponse/*[namespace-uri()='http://sample/iibadmin' and local-name()='EMPLOYEE']/EMPLOYEE[1]/SALARY

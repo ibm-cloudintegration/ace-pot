@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:complexType name="DBRespType">
+    	<xsd:sequence>
+    		<xsd:element name="UserReturnCode" type="xsd:int" nillable="true"></xsd:element>
+            <xsd:element name="RowsRetrieved" type="xsd:int" nillable="true"></xsd:element>
+            <xsd:element name="RowsAdded" type="xsd:int" nillable="true"></xsd:element>
+    		<xsd:element name="RowsUpdated" type="xsd:int" nillable="true"></xsd:element>
+    		<xsd:element name="RowsDeleted" type="xsd:int" nillable="true"></xsd:element>
+    		<xsd:element name="SQLCode_ErrorCode" type="xsd:int" nillable="true"></xsd:element>
+    		<xsd:element name="SQLState_SQLState" type="xsd:string" nillable="true"></xsd:element>
+    		<xsd:element name="SQL_Error_Message" type="xsd:string" nillable="true"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="DBResp" type="DBRespType"></xsd:element>
+</xsd:schema>

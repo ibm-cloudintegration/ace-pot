@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-workspace name="EmployeeService_PrebuiltWorkspace" soapui-version="5.0.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:project name="EmployeeService_JSONClient - Async">C:/student10/SOAPUI Projects/EmployeeService_JSONClient---Async-soapui-project.xml</con:project>
+  <con:project name="EmployeeService_JSONClient - Sync">C:/student10/SOAPUI Projects/EmployeeService_JSONClient---Sync-soapui-project.xml</con:project>
+  <con:project name="EmployeeService_checkBonus">C:/student10/BusinessRules/SOAPUI Projects/EmployeeService-checkBonus-soapui-project.xml</con:project>
+  <con:project name="EmployeeService_JSONClient - Check Bonus">C:/student10/BusinessRules/SOAPUI Projects/EmployeeService-JSONClient---Check-Bonus-soapui-project.xml</con:project>
+  <con:project status="CLOSED" name="EmployeeService_predictSalary">Z:/Z/MB/V10Next/LABS/MattB - R/EmployeeService-predictSalary-soapui-project.xml</con:project>
+  <con:project name="EmployeeService_REST">C:/student10/SOAPUI Projects/EmployeeService-REST-soapui-project.xml</con:project>
+  <con:project name="EmployeeService_JSONMQClient - Sync">C:/student10/SOAPUI Projects/EmployeeService-JSONMQClient---Sync-soapui-project.xml</con:project>
+  <con:project name="EmployeeService - MessageFlowSecurity ( BasicAuth)">C:/student10/SOAPUI Projects/EmployeeService- MessageFlowSecurity--BasicAuth-soapui-project.xml</con:project>
+  <con:project name="EmployeeService - MessageFlowSecurity (JSONClient, BasicAuth)">C:/student10/SOAPUI Projects/EmployeeService-JSONClient---MessageFlowSecurity--BasicAuth-soapui-project.xml</con:project>
+  <con:project name="EmployeeService - MessageFlowSecurity (SSL, X.509)">C:/student10/SOAPUI Projects/EmployeeService---MessageFlowSecurity--SSL--X-509-soapui-project.xml</con:project>
+  <con:project name="EmployeeService - MessageFlowSecurity (SSL Test Harness)">C:/student10/SOAPUI Projects/EmployeeService---MessageFlowSecurity--SSL-Test-Harness-soapui-project.xml</con:project>
+  <con:project name="DepartmentService_REST">C:/student10/SOAPUI Projects/DepartmentService-REST-soapui-project.xml</con:project>
+  <con:project name="EmployeeService">C:/student10/SOAPUI Projects/EmployeeService-soapui-project.xml</con:project>
+  <con:project name="EmployeeService - CallableFlow">C:/student10/SOAPUI Projects/EmployeeService---CallableFlow-soapui-project.xml</con:project>
+  <con:project name="DepartmentService_WithoutExistingSwagger">C:/student10/SOAPUI Projects/DepartmentService_withoutExistingSwagger.xml</con:project>
+  <con:project name="App Connect Personal API Test">C:/student10/SOAPUI Projects/App-Connect-Personal-API-Test-soapui-project.xml</con:project>
+  <con:project name="REST Callable Flows Async">C:/student10/SOAPUI Projects/REST Callable Async Flows-soapui-project.xml</con:project>
+  <con:project name="HR_Service_forWebDevLab">C:/student10/SOAPUI Projects/HR-Service-forWebDevLab-soapui-project.xml</con:project>
+  <con:project name="HR_SIS_demo">C:/student10/SOAPUI Projects/HR-SIS-demo-soapui-project.xml</con:project>
+  <con:project name="HR_WebDev">C:/student10/SOAPUI Projects/HR-WebDev-soapui-project.xml</con:project>
+</con:soapui-workspace>
