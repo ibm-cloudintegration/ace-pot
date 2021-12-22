@@ -1,0 +1,8 @@
+db.createUser(
+  {
+    user: "mdbadmin",
+    pwd: "passw0rd",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" }
+             { role: "readWrite", db: "HRDB" } ]
+  }
+)

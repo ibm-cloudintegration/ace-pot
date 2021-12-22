@@ -1,0 +1,6 @@
+db.grantRolesToUser(
+    "mdbuser",
+    [
+      { role: "readWrite", db: "HRDB" }
+    ]
+)

@@ -1,0 +1,8 @@
+	/* This is the format of the StrongLoop filterString we creating:  */
+	/*                 ... filterString = '{"where": {"EMPNO":"000010"}}'          */
+	/*	set OutputLocalEnvironment.Destination.Loopback.Request.filterString = '{"where": {"EMPNO":"' || employeeNumber || '"}}';  */
+		
+		set OutputLocalEnvironment.Destination.Loopback.Request.filterString = 
+		   '{"where": {"EMPNO":"'
+		   || InputLocalEnvironment.REST.Input.Parameters.employeeNumber
+		   || '"}}';

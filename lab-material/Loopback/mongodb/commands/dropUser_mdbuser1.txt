@@ -1,0 +1,11 @@
+db.dropUser(
+  {
+    user: "mdbuser1",
+    writeConcern: { "Some reason"}
+  }
+)
+db.runCommand(
+  {
+    dropUser: "mdbuser1"
+  }
+)

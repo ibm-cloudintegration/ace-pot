@@ -1,0 +1,21 @@
+var mydocuments =
+    [
+      {
+        item: "ABC2",
+        details: { model: "14Q3", manufacturer: "M1 Corporation" },
+        stock: [ { size: "M", qty: 50 } ],
+        category: "clothing"
+      },
+      {
+        item: "MNO2",
+        details: { model: "14Q3", manufacturer: "ABC Company" },
+        stock: [ { size: "S", qty: 5 }, { size: "M", qty: 5 }, { size: "L", qty: 1 } ],
+        category: "clothing"
+      },
+      {
+        item: "IJK2",
+        details: { model: "14Q2", manufacturer: "M5 Corporation" },
+        stock: [ { size: "S", qty: 5 }, { size: "L", qty: 1 } ],
+        category: "houseware"
+      }
+    ];

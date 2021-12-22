@@ -1,0 +1,16 @@
+{
+  "ids": {
+    "SHAREPRICES": 4,
+    "companies": 2
+  },
+  "models": {
+    "SHAREPRICES": {
+      "1": "{\"Id\":1,\"company\":\"IBM\",\"phone\":\"111\",\"price\":50}",
+      "2": "{\"Id\":2,\"company\":\"Unilever\",\"phone\":\"222\",\"price\":100}",
+      "3": "{\"Id\":3,\"company\":\"Oracle\",\"phone\":\"333\",\"price\":200}"
+    },
+    "companies": {
+      "1": "{\"Id\":1,\"company\":\"Disney\",\"price\":25,\"telephone\":\"01962 815000\"}"
+    }
+  }
+}

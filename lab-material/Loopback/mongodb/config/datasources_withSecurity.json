@@ -1,0 +1,23 @@
+{
+  "memory": {
+    "name": "memory",
+    "connector": "memory",
+    "file": "c:/student10/loopback/mongodb/memory/mydata.json"
+  },
+  "mongodb": {
+    "host": "betaworks-esb10",
+    "port": 27017,
+    "database": "HRDB",
+    "name": "mongodb",
+    "connector": "mongodb"
+  },
+  "mongodb_secure": {
+    "host": "betaworks-esb10",
+    "port": 27017,
+    "database": "HRDB",
+    "name": "mongodb",
+    "connector": "mongodb",
+	"username": "mdbuser1",
+	"password": "passw0rd"
+  }
+}

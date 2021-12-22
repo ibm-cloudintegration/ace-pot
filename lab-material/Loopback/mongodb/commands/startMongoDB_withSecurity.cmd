@@ -1,0 +1,1 @@
+mongod --auth --dbpath c:\student10\loopback\mongodb\data\db
